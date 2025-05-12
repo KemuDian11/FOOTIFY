@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kategori Celana | KemuDian</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .product-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .product-card {
+      transition: transform 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white">KemuDian</div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="index.html" class="text-white hover:text-gray-200">Beranda</a>
+        <a href="baju.html" class="text-white hover:text-gray-200">Baju</a>
+        <a href="aksesori.html" class="text-white hover:text-gray-200">Aksesori</a>
+        <a href="celana.html" class="text-white hover:text-gray-200">Celana</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-gray-100 py-12 text-center">
+    <h1 class="text-4xl font-bold text-blue-600">Kategori Celana</h1>
+    <p class="text-gray-600 mt-2">Temukan berbagai celana modis untuk gaya santai maupun formalmu!</p>
+  </header>
+
+  <!-- Celana List -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      <!-- Produk 1: Celana -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="celana1.jpg" alt="Celana 1" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Celana Jeans Slim Fit</h3>
+          <p class="text-gray-600">Celana jeans slim fit dengan bahan nyaman untuk tampilan kasual.</p>
+          <p class="text-blue-600 font-semibold">Rp 399,000</p>
+        </div>
+      </div>
+      
+      <!-- Produk 2: Celana -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="celana2.jpg" alt="Celana 2" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Celana Kargo Tahan Lama</h3>
+          <p class="text-gray-600">Celana kargo dengan banyak kantong untuk kenyamanan dan fungsionalitas.</p>
+          <p class="text-blue-600 font-semibold">Rp 299,000</p>
+        </div>
+      </div>
+
+      <!-- Produk 3: Celana -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="celana3.jpg" alt="Celana 3" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Celana Chino Slim Fit</h3>
+          <p class="text-gray-600">Celana chino slim fit dengan bahan yang nyaman dan cocok untuk formal maupun kasual.</p>
+          <p class="text-blue-600 font-semibold">Rp 450,000</p>
+        </div>
+      </div>
+
+      <!-- Produk 4: Celana -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="celana4.jpg" alt="Celana 4" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Celana Jogger Sport</h3>
+          <p class="text-gray-600">Celana jogger sport untuk aktivitas outdoor yang nyaman dan fleksibel.</p>
+          <p class="text-blue-600 font-semibold">Rp 299,000</p>
+        </div>
+      </div>
+
+      <!-- Produk 5: Celana -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="celana5.jpg" alt="Celana 5" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Celana Formal Hitam</h3>
+          <p class="text-gray-600">Celana formal hitam yang cocok untuk acara formal dan bisnis.</p>
+          <p class="text-blue-600 font-semibold">Rp 550,000</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
+    &copy; 2025 KemuDian. All rights reserved.
+  </footer>
+
+</body>
+</html>
