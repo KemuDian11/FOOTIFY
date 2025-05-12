@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kategori Aksesori | KemuDian</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .product-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .product-card {
+      transition: transform 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white">KemuDian</div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="index.html" class="text-white hover:text-gray-200">Beranda</a>
+        <a href="baju.html" class="text-white hover:text-gray-200">Baju</a>
+        <a href="aksesori.html" class="text-white hover:text-gray-200">Aksesori</a>
+        <a href="celana.html" class="text-white hover:text-gray-200">Celana</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-gray-100 py-12 text-center">
+    <h1 class="text-4xl font-bold text-blue-600">Kategori Aksesori</h1>
+    <p class="text-gray-600 mt-2">Temukan berbagai aksesori untuk melengkapi gaya modismu!</p>
+  </header>
+
+  <!-- Aksesori List -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      
+      <!-- Produk 1: Aksesori -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="aksesori1.jpg" alt="Aksesori 1" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Jam Tangan Elegan</h3>
+          <p class="text-gray-600">Jam tangan yang stylish dan elegan untuk melengkapi penampilan.</p>
+          <p class="text-blue-600 font-semibold">Rp 599,000</p>
+        </div>
+      </div>
+      
+      <!-- Produk 2: Aksesori -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="aksesori2.jpg" alt="Aksesori 2" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Kacamata Stylish</h3>
+          <p class="text-gray-600">Kacamata dengan desain modern yang cocok untuk segala suasana.</p>
+          <p class="text-blue-600 font-semibold">Rp 349,000</p>
+        </div>
+      </div>
+
+      <!-- Produk 3: Aksesori -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="aksesori3.jpg" alt="Aksesori 3" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Gelang Kulit</h3>
+          <p class="text-gray-600">Gelang kulit yang memberikan kesan maskulin dan berkelas.</p>
+          <p class="text-blue-600 font-semibold">Rp 199,000</p>
+        </div>
+      </div>
+
+      <!-- Produk 4: Aksesori -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="aksesori4.jpg" alt="Aksesori 4" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Tas Ransel Fashionable</h3>
+          <p class="text-gray-600">Tas ransel yang praktis dan stylish, cocok untuk berbagai aktivitas.</p>
+          <p class="text-blue-600 font-semibold">Rp 899,000</p>
+        </div>
+      </div>
+
+      <!-- Produk 5: Aksesori -->
+      <div class="product-card border rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <img src="aksesori5.jpg" alt="Aksesori 5" class="product-img">
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2">Topi Casual</h3>
+          <p class="text-gray-600">Topi casual untuk gaya santai yang tetap keren.</p>
+          <p class="text-blue-600 font-semibold">Rp 149,000</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
+    &copy; 2025 KemuDian. All rights reserved.
+  </footer>
+
+</body>
+</html>
