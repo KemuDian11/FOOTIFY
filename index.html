@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KemuDian | Fashion & Aksesori</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  
-<style>.swiper {touch-action: pan-y;}
-</style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
@@ -111,7 +107,22 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper(".mySwiper", {slidesPerView: 1.2, spaceBetween: 20, loop: true, navigation: {nextEl: ".swiper-button-next",prevEl: ".swiper-button-prev",},breakpoints: {768: {slidesPerView: 2.2,},},});
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      allowTouchMove: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.2,
+        },
+      },
+    });
   </script>
 </body>
 </html>
