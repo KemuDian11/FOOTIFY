@@ -5,96 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KemuDian | Fashion & Aksesori</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
   <!-- Navbar -->
-<nav class="bg-blue-600 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="text-2xl font-bold text-white">KemuDian</div>
-    <div class="space-x-6 hidden md:flex">
-      <a href="#" class="text-white hover:text-gray-200">Beranda</a>
-      <a href="#" class="text-white hover:text-gray-200">Produk</a>
-      <a href="#" class="text-white hover:text-gray-200">Tentang</a>
-      <a href="#" class="text-white hover:text-gray-200">Kontak</a>
+  <nav class="bg-blue-600 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white">KemuDian</div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#" class="text-white hover:text-gray-200">Beranda</a>
+        <a href="#" class="text-white hover:text-gray-200">Produk</a>
+        <a href="#" class="text-white hover:text-gray-200">Tentang</a>
+        <a href="#" class="text-white hover:text-gray-200">Kontak</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Hero Section -->
   <section class="relative bg-gray-100">
     <section id="kategori-produk" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Tampil Gaya dengan <span class="text-blue-600">KemuDian</span></h1>
+          <p class="text-lg text-gray-600 mb-6">Temukan koleksi terbaik sepatu, baju, dan aksesori untuk gaya hidup modernmu.</p>
+          <a href="#kategori-produk" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Lihat Koleksi</a>
+        </div>
 
-    <div class="max-w-7xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Tampil Gaya dengan <span class="text-blue-600">KemuDian</span></h1>
-        <p class="text-lg text-gray-600 mb-6">Temukan koleksi terbaik sepatu, baju, dan aksesori untuk gaya hidup modernmu.</p>
-        
-        <a href="#kategori-produk" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Lihat Koleksi</a>
-
+        <!-- Swiper Slider Gambar -->
+        <div class="md:w-1/2 mt-10 md:mt-0">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="alyssa-strohmann-TS--uNw-JqE-unsplash.jpg" alt="Fashion" class="rounded-xl shadow-lg w-full">
+              </div>
+              <div class="swiper-slide">
+                <img src="id-11134207-7r98r-lmfti21mky30b2.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
+              </div>
+              <div class="swiper-slide">
+                <img src="id-11134207-7r98r-lqk2bkra90jc3b@resize_w900_nl.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
+              </div>
+            </div>
+            <!-- Tombol navigasi opsional -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
       </div>
-      <div class="md:w-1/2 mt-10 md:mt-0">
-        <img src="alyssa-strohmann-TS--uNw-JqE-unsplash.jpg" alt="Fashion" class="rounded-xl shadow-lg">
-        <img src="id-11134207-7r98r-lmfti21mky30b2.webp" alt="Fashion" class="rounded-xl shadow-lg">
-        <img src="id-11134207-7r98r-lqk2bkra90jc3b@resize_w900_nl.webp" alt="Fashion" class="rounded-xl shadow-lg">
+    </section>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Kategori Produk</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Sepatu -->
+        <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="rafael-atantya-_XsTyceKZqU-unsplash.jpg" alt="Sepatu" class="w-full h-56 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Sepatu</h3>
+            <p class="text-gray-600">Sepatu stylish dan nyaman untuk segala aktivitas harianmu.</p>
+          </div>
+        </div>
+
+        <!-- Baju -->
+        <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="josue-dual-TvAkxS3LE0I-unsplash.jpg" alt="Baju" class="w-full h-56 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Baju</h3>
+            <p class="text-gray-600">Pakaian casual dan formal yang cocok untuk pria maupun wanita.</p>
+          </div>
+        </div>
+
+        <!-- Aksesori -->
+        <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="luke-peterson-lUMj2Zv5HUE-unsplash.jpg" alt="Aksesori" class="w-full h-56 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Aksesori</h3>
+            <p class="text-gray-600">Aksesori pilihan untuk menyempurnakan tampilan modismu.</p>
+          </div>
+        </div>
+
+        <!-- Celana -->
+        <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="mohamad-khosravi-YAWSHBdjdO0-unsplash.jpg" alt="Celana" class="w-full h-56 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Celana</h3>
+            <p class="text-gray-600">Celana modis untuk tampilan santai maupun formal.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
- <!-- Product Categories -->
-<section class="py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Kategori Produk</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      
-      <!-- Sepatu -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="rafael-atantya-_XsTyceKZqU-unsplash.jpg" alt="Sepatu" class="w-full h-56 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Sepatu</h3>
-          <p class="text-gray-600">Sepatu stylish dan nyaman untuk segala aktivitas harianmu.</p>
-        </div>
-      </div>
-    
-
-      <!-- Baju -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="josue-dual-TvAkxS3LE0I-unsplash.jpg" alt="Baju" class="w-full h-56 object-cover">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Baju</h3>
-          <p class="text-gray-600">Pakaian casual dan formal yang cocok untuk pria maupun wanita.</p>
-        </div>
-      </div>
-    
-
-      <!-- Aksesori -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="luke-peterson-lUMj2Zv5HUE-unsplash.jpg" alt="Aksesori" class="w-full h-56 object-cover object-center">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Aksesori</h3>
-          <p class="text-gray-600">Aksesori pilihan untuk menyempurnakan tampilan modismu.</p>
-        </div>
-      </div>
-  
-
-      <!-- Celana -->
-      <div class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition">
-        <img src="mohamad-khosravi-YAWSHBdjdO0-unsplash.jpg" alt="Celana" class="w-full h-56 object-cover object-center">
-        <div class="p-4">
-          <h3 class="text-xl font-semibold mb-2">Celana</h3>
-          <p class="text-gray-600">Celana modis untuk tampilan santai maupun formal.</p>
-        </div>
-      </div>
-  
-
-    </div>
-  </div>
-</section>
 
   <!-- Footer -->
   <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
     &copy; 2025 KemuDian. All rights reserved.
   </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.2,
+        },
+      },
+    });
+  </script>
 </body>
 </html>
+
