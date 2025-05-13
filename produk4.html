@@ -1,81 +1,147 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>UNERD STRYKE Sneakers</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-        }
-        .product-container {
-            max-width: 900px;
-            margin: auto;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .product-image {
-            max-width: 100%;
-            height: auto;
-        }
-        .price {
-            color: #d10000;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .original-price {
-            text-decoration: line-through;
-            color: #888;
-            margin-left: 10px;
-        }
-        .description {
-            margin-top: 20px;
-            line-height: 1.6;
-        }
-        .rating {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .buy-button {
-            background-color: #d10000;
-            color: white;
-            padding: 15px 25px;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>UNERD STRYKE Sneakers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .product-container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .carousel-image {
+      min-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .price {
+      color: #d10000;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .original-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-left: 10px;
+    }
+
+    .description {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .rating {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .buy-button {
+      background-color: #d10000;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="product-container">
-        <h1>UNERD | STRYKE | Sepatu Sneakers Pria Wanita</h1>
-        <img src="SLIDE 4.webp" alt="UNERD STRYKE Sneakers" class="product-image">
- <img src="produk4.2.webp" alt="UNERD STRYKE Sneakers" class="product-image">
- <img src="produk4.3.webp" alt="UNERD STRYKE Sneakers" class="product-image">
- <img src="produk4.4.webp" alt="UNERD STRYKE Sneakers" class="product-image">
- <img src="produk4.5.webp" alt="UNERD STRYKE Sneakers" class="product-image">
-     <img src="produk4.6.webp" alt="UNERD STRYKE Sneakers" class="product-image">
-         <img src="produk4.7.webp" alt="UNERD STRYKE Sneakers" class="product-image">
-        <p class="price">Rp328.060 <span class="original-price">Rp698.000</span></p>
-        <p>Terjual: 1,3RB+</p>
-        <p class="rating">⭐ 4.9 / 5.0</p>
-        <p><strong>Garansi tiba:</strong> 3 Hari</p>
-        <p><strong>Pengembalian:</strong> 15 Hari | <strong>100% Original</strong></p>
-        <div class="description">
-            <h2>Deskripsi</h2>
-            <p>
-                STRYKE terinspirasi dari ketekunan dalam sebuah permainan. Seperti dalam mencapai “strike”,
-                dalam hidup, kita juga perlu mengasah keterampilan dan berlatih terus menerus untuk mencapai tujuan.
-                Tidak ada jalan yang instan, semua membutuhkan proses. Dengan sepatu ini kami mengajak setiap orang
-                untuk berproses menuju versi terbaik dari dirinya.
-            </p>
-        </div>
-        <a href="#" class="buy-button">Beli Dengan Voucher Rp328.060</a>
+  <div class="product-container">
+    <h1>UNERD | STRYKE | Sepatu Sneakers Pria Wanita</h1>
+
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="SLIDE 4.webp" alt="Gambar 1" class="carousel-image">
+        <img src="produk4.2.webp" alt="Gambar 2" class="carousel-image">
+        <img src="produk4.3.webp" alt="Gambar 3" class="carousel-image">
+        <img src="produk4.4.webp" alt="Gambar 4" class="carousel-image">
+        <img src="produk4.5.webp" alt="Gambar 5" class="carousel-image">
+        <img src="produk4.6.webp" alt="Gambar 6" class="carousel-image">
+        <img src="produk4.7.webp" alt="Gambar 7" class="carousel-image">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+      </div>
     </div>
+
+    <p class="price">Rp328.060 <span class="original-price">Rp698.000</span></p>
+    <p>Terjual: 1,3RB+</p>
+    <p class="rating">⭐ 4.9 / 5.0</p>
+    <p><strong>Garansi tiba:</strong> 3 Hari</p>
+    <p><strong>Pengembalian:</strong> 15 Hari | <strong>100% Original</strong></p>
+
+    <div class="description">
+      <h2>Deskripsi</h2>
+      <p>
+        STRYKE terinspirasi dari ketekunan dalam sebuah permainan. Seperti dalam mencapai “strike”,
+        dalam hidup, kita juga perlu mengasah keterampilan dan berlatih terus menerus untuk mencapai tujuan.
+        Tidak ada jalan yang instan, semua membutuhkan proses. Dengan sepatu ini kami mengajak setiap orang
+        untuk berproses menuju versi terbaik dari dirinya.
+      </p>
+    </div>
+
+    <a href="#" class="buy-button">Beli Dengan Voucher Rp328.060</a>
+  </div>
+
+  <script>
+    const track = document.getElementById('carouselTrack');
+    let index = 0;
+
+    function moveSlide(direction) {
+      const slides = track.children.length;
+      index += direction;
+
+      if (index < 0) index = slides - 1;
+      if (index >= slides) index = 0;
+
+      const slideWidth = track.clientWidth;
+      track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
+    }
+  </script>
 </body>
 </html>
+
