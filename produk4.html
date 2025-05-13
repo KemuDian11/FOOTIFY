@@ -148,11 +148,10 @@
       </p>
     </div>
 <div style="text-align: center;">
-    <button class="buy-button" onclick="redirectToShopee()">Beli Sekarang</button>
-<p id="fallback" style="margin-top: 20px; display: none;">
-  Tidak terbuka otomatis? <br>
-  <a href="https://s.shopee.co.id/9UotDf5Pnu" target="_blank">Klik di sini untuk buka di Shopee</a>
+    <p style="font-size: 14px; color: #666; margin-top: 10px;">
+  Jika tidak terbuka otomatis, <a href="https://s.shopee.co.id/9AC2wGO2Qi?share_channel_code=1" target="_blank">klik di sini untuk buka di Shopee</a>
 </p>
+
 
 </div>
 
@@ -233,28 +232,7 @@
     setupSwipe('mainCarousel', 'carouselTrack');
     setupSwipe('reviewCarousel', 'reviewTrack', true);
   </script>
-  <script>
-  function redirectToShopee() {
-    const fallback = document.getElementById("fallback");
-    const start = Date.now();
-
-    const intentUrl = "intent://s.shopee.co.id/9UotDf5Pnu#Intent;scheme=https;package=com.shopee.id;end";
-
-    const timeout = setTimeout(() => {
-      const elapsed = Date.now() - start;
-      if (elapsed < 2100) {
-        fallback.style.display = 'block';
-      }
-    }, 2000);
-
-    window.location.href = intentUrl;
-
-    window.onblur = () => {
-      clearTimeout(timeout);
-    };
-  }
-</script>
-
+  
 </body>
 </html>
 
