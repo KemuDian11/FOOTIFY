@@ -86,6 +86,15 @@
       display: inline-block;
       margin-top: 20px;
     }
+
+    .review-carousel-container {
+      margin-top: 40px;
+    }
+
+    .review-carousel-container h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
@@ -125,6 +134,25 @@
     </div>
 
     <a href="#" class="buy-button">Beli Sekarang</a>
+
+    <div class="review-carousel-container">
+      <h2>Foto Review Pembeli</h2>
+      <div class="carousel-container">
+        <div class="carousel-track" id="reviewTrack">
+          <img src="reviewproduk4.1.webp" alt="Review 1" class="carousel-image">
+          <img src="reviewproduk4.2.webp" alt="Review 2" class="carousel-image">
+          <img src="reviewproduk4.3.mp4" alt="Review 3" class="carousel-image">
+          <img src="review4produk4..webp" alt="Review 4" class="carousel-image">
+          <img src="reviewproduk4.5.webp" alt="Review 5" class="carousel-image">
+          <img src="reviewproduk4.6.webp" alt="Review 6" class="carousel-image">
+          <img src="reviewproduk4.7.mp4" alt="Review 7" class="carousel-image">
+        </div>
+        <div class="carousel-buttons">
+          <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
+          <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -141,7 +169,22 @@
       const slideWidth = track.clientWidth;
       track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
     }
+
+    let reviewIndex = 0;
+
+    function moveReviewSlide(direction) {
+      const reviewTrack = document.getElementById('reviewTrack');
+      const totalReviews = reviewTrack.children.length;
+      reviewIndex += direction;
+
+      if (reviewIndex < 0) reviewIndex = totalReviews - 1;
+      if (reviewIndex >= totalReviews) reviewIndex = 0;
+
+      const slideWidth = reviewTrack.clientWidth;
+      reviewTrack.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
+    }
   </script>
 </body>
 </html>
+
 
