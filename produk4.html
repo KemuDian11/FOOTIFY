@@ -2,11 +2,12 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UNERD STRYKE Sneakers</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
       background-color: #f9f9f9;
     }
 
@@ -24,6 +25,7 @@
       position: relative;
       width: 100%;
       margin-bottom: 20px;
+      touch-action: pan-y;
     }
 
     .carousel-track {
@@ -31,10 +33,12 @@
       transition: transform 0.4s ease-in-out;
     }
 
-    .carousel-image {
+    .carousel-image,
+    video.carousel-image {
       min-width: 100%;
       height: auto;
       border-radius: 5px;
+      object-fit: cover;
     }
 
     .carousel-buttons {
@@ -79,12 +83,14 @@
     .buy-button {
       background-color: #d10000;
       color: white;
-      padding: 15px 25px;
+      padding: 18px 30px;
       text-decoration: none;
-      font-size: 16px;
-      border-radius: 5px;
+      font-size: 18px;
+      border-radius: 8px;
       display: inline-block;
       margin-top: 20px;
+      width: 100%;
+      text-align: center;
     }
 
     .review-carousel-container {
@@ -95,13 +101,20 @@
       font-size: 20px;
       margin-bottom: 10px;
     }
+
+    @media (max-width: 600px) {
+      .buy-button {
+        font-size: 20px;
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="product-container">
     <h1>UNERD | STRYKE | Sepatu Sneakers Pria Wanita</h1>
 
-    <div class="carousel-container">
+    <div class="carousel-container" id="mainCarousel">
       <div class="carousel-track" id="carouselTrack">
         <img src="SLIDE 4.webp" alt="Gambar 1" class="carousel-image">
         <img src="produk4.2.webp" alt="Gambar 2" class="carousel-image">
@@ -137,15 +150,15 @@
 
     <div class="review-carousel-container">
       <h2>Foto Review Pembeli</h2>
-      <div class="carousel-container">
+      <div class="carousel-container" id="reviewCarousel">
         <div class="carousel-track" id="reviewTrack">
           <img src="reviewproduk4.1.webp" alt="Review 1" class="carousel-image">
           <img src="reviewproduk4.2.webp" alt="Review 2" class="carousel-image">
-          <img src="reviewproduk4.3.mp4" alt="Review 3" class="carousel-image">
-          <img src="review4produk4..webp" alt="Review 4" class="carousel-image">
+          <video src="reviewproduk4.3.mp4" class="carousel-image" controls></video>
+          <img src="review4produk4.4.webp" alt="Review 4" class="carousel-image">
           <img src="reviewproduk4.5.webp" alt="Review 5" class="carousel-image">
           <img src="reviewproduk4.6.webp" alt="Review 6" class="carousel-image">
-          <img src="reviewproduk4.7.mp4" alt="Review 7" class="carousel-image">
+          <video src="reviewproduk4.7.mp4" class="carousel-image" controls></video>
         </div>
         <div class="carousel-buttons">
           <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
@@ -156,35 +169,59 @@
   </div>
 
   <script>
-    const track = document.getElementById('carouselTrack');
-    let index = 0;
-
-    function moveSlide(direction) {
+    function setupSwipe(carouselId, trackId, isReview = false) {
+      let startX = 0;
+      let currentIndex = 0;
+      const container = document.getElementById(carouselId);
+      const track = document.getElementById(trackId);
       const slides = track.children.length;
-      index += direction;
 
-      if (index < 0) index = slides - 1;
-      if (index >= slides) index = 0;
+      container.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      });
 
+      container.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+        const threshold = 50;
+
+        if (diff > threshold) {
+          currentIndex = (currentIndex - 1 + slides) % slides;
+        } else if (diff < -threshold) {
+          currentIndex = (currentIndex + 1) % slides;
+        }
+
+        const slideWidth = track.clientWidth;
+        track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+        if (isReview) reviewIndex = currentIndex;
+        else index = currentIndex;
+      });
+    }
+
+    let index = 0;
+    function moveSlide(direction) {
+      const track = document.getElementById('carouselTrack');
+      const slides = track.children.length;
+      index = (index + direction + slides) % slides;
       const slideWidth = track.clientWidth;
       track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
     }
 
     let reviewIndex = 0;
-
     function moveReviewSlide(direction) {
-      const reviewTrack = document.getElementById('reviewTrack');
-      const totalReviews = reviewTrack.children.length;
-      reviewIndex += direction;
-
-      if (reviewIndex < 0) reviewIndex = totalReviews - 1;
-      if (reviewIndex >= totalReviews) reviewIndex = 0;
-
-      const slideWidth = reviewTrack.clientWidth;
-      reviewTrack.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
+      const track = document.getElementById('reviewTrack');
+      const slides = track.children.length;
+      reviewIndex = (reviewIndex + direction + slides) % slides;
+      const slideWidth = track.clientWidth;
+      track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
     }
+
+    setupSwipe('mainCarousel', 'carouselTrack');
+    setupSwipe('reviewCarousel', 'reviewTrack', true);
   </script>
 </body>
 </html>
+
 
 
