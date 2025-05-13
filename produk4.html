@@ -83,14 +83,16 @@
     .buy-button {
       background-color: #d10000;
       color: white;
-      padding: 18px 30px;
+      padding: 14px 24px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
       border-radius: 8px;
       display: inline-block;
       margin-top: 20px;
       width: 100%;
       text-align: center;
+      box-sizing: border-box;
+      max-width: 300px;
     }
 
     .review-carousel-container {
@@ -104,8 +106,8 @@
 
     @media (max-width: 600px) {
       .buy-button {
-        font-size: 20px;
-        padding: 20px;
+        font-size: 18px;
+        padding: 16px;
       }
     }
   </style>
@@ -146,7 +148,11 @@
       </p>
     </div>
 
-    <a href="#" class="buy-button">Beli Sekarang</a>
+    <div style="text-align: center;">
+      <a href="https://s.shopee.co.id/9UotDf5Pnu" class="buy-button" target="_blank" rel="noopener noreferrer">
+        Beli Sekarang
+      </a>
+    </div>
 
     <div class="review-carousel-container">
       <h2>Foto Review Pembeli</h2>
@@ -222,6 +228,7 @@
   </script>
 </body>
 </html>
+
 
 
 
