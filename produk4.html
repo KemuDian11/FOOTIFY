@@ -4,40 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UNERD STRYKE Sneakers</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-    }
-
-    .product-container {
-      max-width: 900px;
-      margin: auto;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .carousel-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      margin-bottom: 20px;
-      touch-action: pan-y;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .carousel-image,
-    video.carousel-image {
+    .carousel-image, video.carousel-image {
       min-width: 100%;
       height: auto;
-      border-radius: 5px;
+      border-radius: 0.5rem;
       object-fit: cover;
     }
 
@@ -54,113 +26,29 @@
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
       border: none;
-      padding: 10px;
+      padding: 0.5rem 1rem;
       cursor: pointer;
-    }
-
-    .price {
-      color: #d10000;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .original-price {
-      text-decoration: line-through;
-      color: #888;
-      margin-left: 10px;
-    }
-
-    .description {
-      margin-top: 20px;
-      line-height: 1.6;
-    }
-
-    .rating {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .buy-button {
-      background-color: #d10000;
-      color: white;
-      padding: 14px 24px;
-      text-decoration: none;
-      font-size: 16px;
-      border-radius: 8px;
-      display: inline-block;
-      margin-top: 20px;
-      width: 100%;
-      text-align: center;
-      box-sizing: border-box;
-      max-width: 300px;
-    }
-
-    .review-carousel-container {
-      margin-top: 40px;
-    }
-
-    .review-carousel-container h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .review-carousel-container .carousel-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      max-width: 900px;
-      margin: auto;
-      touch-action: pan-y;
-    }
-
-    .review-carousel-container .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .review-carousel-container .carousel-image {
-      min-width: 100%;
-      height: auto;
-      border-radius: 5px;
-      object-fit: cover;
-    }
-
-    .review-carousel-container .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-
-    .review-carousel-container .carousel-button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 600px) {
-      .buy-button {
-        font-size: 18px;
-        padding: 16px;
-      }
-
-      .review-carousel-container .carousel-image {
-        width: 100%;
-      }
+      border-radius: 9999px;
     }
   </style>
 </head>
-<body>
-  <div class="product-container">
-    <h1>UNERD | STRYKE | Sepatu Sneakers Pria Wanita</h1>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <div class="carousel-container" id="mainCarousel">
-      <div class="carousel-track" id="carouselTrack">
+  <!-- Tombol Kembali -->
+  <div class="max-w-5xl mx-auto mt-6 px-6">
+    <a href="kategori.html" class="text-blue-600 hover:underline text-sm flex items-center mb-4">
+      ← Kembali ke Kategori
+    </a>
+  </div>
+
+  <!-- Container Produk -->
+  <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-xl">
+    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-600">UNERD | STRYKE</h1>
+    <p class="text-center text-lg mb-6">Sepatu Sneakers Pria & Wanita</p>
+
+    <!-- Carousel Gambar -->
+    <div class="relative overflow-hidden mb-6" id="mainCarousel">
+      <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
         <img src="SLIDE 4.webp" alt="Gambar 1" class="carousel-image">
         <img src="produk4.2.webp" alt="Gambar 2" class="carousel-image">
         <img src="produk4.3.webp" alt="Gambar 3" class="carousel-image">
@@ -175,32 +63,39 @@
       </div>
     </div>
 
-    <p class="price"> Mulai Rp328.060 <span class="original-price">Rp698.000</span></p>
-    <p>Terjual: 1,3RB+</p>
-    <p class="rating">⭐ 4.9 / 5.0</p>
-    <p><strong>Garansi tiba:</strong> 3 Hari</p>
-    <p><strong>Pengembalian:</strong> 15 Hari | <strong>100% Original</strong></p>
-
-    <div class="description">
-      <h2>Deskripsi</h2>
-      <p>
-        STRYKE terinspirasi dari ketekunan dalam sebuah permainan. Seperti dalam mencapai “strike”,
-        dalam hidup, kita juga perlu mengasah keterampilan dan berlatih terus menerus untuk mencapai tujuan.
-        Tidak ada jalan yang instan, semua membutuhkan proses. Dengan sepatu ini kami mengajak setiap orang
-        untuk berproses menuju versi terbaik dari dirinya.
-      </p>
+    <!-- Info -->
+    <div class="space-y-2 text-center">
+      <p class="text-red-600 text-2xl font-semibold">Mulai Rp328.060 <span class="line-through text-gray-500 text-lg">Rp698.000</span></p>
+      <p class="text-sm text-gray-600">Terjual: 1,3RB+</p>
+      <p class="text-yellow-500 text-lg">⭐ 4.9 / 5.0</p>
+      <p><strong>Garansi tiba:</strong> 3 Hari</p>
+      <p><strong>Pengembalian:</strong> 15 Hari | <strong>100% Original</strong></p>
     </div>
-    <div style="text-align: center;">
-      <a href="" class="buy-button">
+
+    <!-- Tombol Beli -->
+    <div class="mt-6 text-center">
+      <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold inline-block">
         Beli Sekarang
       </a>
     </div>
+
+    <!-- Deskripsi -->
+    <div class="mt-10">
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">Deskripsi</h2>
+      <p class="leading-relaxed text-gray-700">
+        STRYKE terinspirasi dari ketekunan dalam sebuah permainan. Seperti dalam mencapai “strike”, dalam hidup,
+        kita juga perlu mengasah keterampilan dan berlatih terus menerus untuk mencapai tujuan. Tidak ada jalan
+        yang instan, semua membutuhkan proses. Dengan sepatu ini kami mengajak setiap orang untuk berproses
+        menuju versi terbaik dari dirinya.
+      </p>
+    </div>
   </div>
 
-  <div class="review-carousel-container">
-    <h2>Foto Review Pembeli</h2>
-    <div class="carousel-container" id="reviewCarousel">
-      <div class="carousel-track" id="reviewTrack">
+  <!-- Review -->
+  <div class="max-w-5xl mx-auto p-6 mt-10 bg-white rounded-xl shadow-md">
+    <h2 class="text-2xl font-semibold text-center mb-4 text-blue-600">Foto Review Pembeli</h2>
+    <div class="relative overflow-hidden" id="reviewCarousel">
+      <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
         <img src="reviewproduk4.1.webp" alt="Review 1" class="carousel-image">
         <img src="reviewproduk4.2.webp" alt="Review 2" class="carousel-image">
         <video src="reviewproduk4.3.mp4" class="carousel-image" controls></video>
@@ -216,6 +111,12 @@
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6 mt-10">
+    © 2025 FOOTIFY. All rights reserved.
+  </footer>
+
+  <!-- Script -->
   <script>
     function setupSwipe(carouselId, trackId, isReview = false) {
       let startX = 0;
@@ -270,6 +171,7 @@
   </script>
 </body>
 </html>
+
 
 
 
