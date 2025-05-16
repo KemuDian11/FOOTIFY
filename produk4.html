@@ -104,18 +104,25 @@
       margin-bottom: 10px;
     }
 
-    /* ✅ Perbaikan ukuran gambar & video di review */
+    .review-carousel-container .carousel-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     .review-carousel-container .carousel-track {
-      justify-content: center;
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      scroll-snap-type: x mandatory;
     }
 
     .review-carousel-container .carousel-image {
-      max-width: 90%;
-      width: 300px;
-      height: auto;
-      margin: 0 auto;
-      border-radius: 5px;
+      flex: 0 0 auto;
+      width: 220px;
+      height: 300px;
+      border-radius: 8px;
       object-fit: cover;
+      scroll-snap-align: center;
     }
 
     @media (max-width: 600px) {
@@ -125,7 +132,8 @@
       }
 
       .review-carousel-container .carousel-image {
-        width: 90%;
+        width: 160px;
+        height: 220px;
       }
     }
   </style>
@@ -185,10 +193,6 @@
           <img src="reviewproduk4.6.webp" alt="Review 6" class="carousel-image">
           <video src="reviewproduk4.7.mp4" class="carousel-image" controls></video>
         </div>
-        <div class="carousel-buttons">
-          <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-          <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
-        </div>
       </div>
     </div>
   </div>
@@ -233,20 +237,11 @@
       track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
     }
 
-    let reviewIndex = 0;
-    function moveReviewSlide(direction) {
-      const track = document.getElementById('reviewTrack');
-      const slides = track.children.length;
-      reviewIndex = (reviewIndex + direction + slides) % slides;
-      const slideWidth = track.clientWidth;
-      track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
-    }
-
     setupSwipe('mainCarousel', 'carouselTrack');
-    setupSwipe('reviewCarousel', 'reviewTrack', true);
   </script>
 </body>
 </html>
+
 
 
 
