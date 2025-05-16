@@ -104,10 +104,28 @@
       margin-bottom: 10px;
     }
 
+    /* ✅ Perbaikan ukuran gambar & video di review */
+    .review-carousel-container .carousel-track {
+      justify-content: center;
+    }
+
+    .review-carousel-container .carousel-image {
+      max-width: 90%;
+      width: 300px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
     @media (max-width: 600px) {
       .buy-button {
         font-size: 18px;
         padding: 16px;
+      }
+
+      .review-carousel-container .carousel-image {
+        width: 90%;
       }
     }
   </style>
@@ -147,21 +165,16 @@
         untuk berproses menuju versi terbaik dari dirinya.
       </p>
     </div>
-<div style="text-align: center;">
- <a href="https://appurl.io/7nXWmICiqH" class="buy-button">
-  Beli Sekarang
-</a>
+    <div style="text-align: center;">
+      <a href="https://appurl.io/7nXWmICiqH" class="buy-button">
+        Beli Sekarang
+      </a>
+    </div>
+  </div>
 
-
-</div>
-
-</div>
-
-
-    <div class="review-carousel-container">
-      <div style="text-align: center;">
+  <div class="review-carousel-container">
+    <div style="text-align: center;">
       <h2>Foto Review Pembeli</h2>
-        
       <div class="carousel-container" id="reviewCarousel">
         <div class="carousel-track" id="reviewTrack">
           <img src="reviewproduk4.1.webp" alt="Review 1" class="carousel-image">
@@ -232,9 +245,10 @@
     setupSwipe('mainCarousel', 'carouselTrack');
     setupSwipe('reviewCarousel', 'reviewTrack', true);
   </script>
-  
 </body>
 </html>
+
+
 
 
 
