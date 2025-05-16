@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <link rel="icon" href="FOOTIFY.png" type="image/png">
+  <link rel="icon" href="LOGODIBROWSER.png" type="image/png">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,32 +17,29 @@
     }
   </style>
 </head>
-<body class="bg-[#0B0633] text-gray-100 font-sans">
+<body class="bg-white text-gray-800 font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-[#0B0633] shadow-md">
+  <nav class="bg-blue-600 shadow-md">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <span class="text-2xl font-bold text-white">FOOTIFY</span>
-        <img src="FOOTIFY.png" alt="FOOTIFY Logo" class="h-8 w-auto">
-      </div>
+      <div class="text-2xl font-bold text-white">FOOTIFY</div>
       <div class="space-x-6 hidden md:flex">
-        <a href="#" class="text-white hover:text-gray-300">Beranda</a>
-        <a href="#" class="text-white hover:text-gray-300">Produk</a>
-        <a href="#" class="text-white hover:text-gray-300">Tentang</a>
-        <a href="#" class="text-white hover:text-gray-300">Kontak</a>
+        <a href="#" class="text-white hover:text-gray-200">Beranda</a>
+        <a href="#" class="text-white hover:text-gray-200">Produk</a>
+        <a href="#" class="text-white hover:text-gray-200">Tentang</a>
+        <a href="#" class="text-white hover:text-gray-200">Kontak</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative bg-[#0B0633]">
-    <section id="kategori-produk" class="py-16">
+  <section class="relative bg-gray-100">
+    <section id="kategori-produk" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">Tampil Gaya dengan <span class="text-yellow-400">FOOTIFY</span></h1>
-          <p class="text-lg text-gray-300 mb-6">Temukan koleksi terbaik sepatu, dan style terbaikmu.</p>
-          <a href="#kategori-produk" class="bg-yellow-400 text-[#0B0633] px-6 py-3 rounded-full hover:bg-yellow-300 transition font-semibold">Lihat Koleksi</a>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Tampil Gaya dengan <span class="text-blue-600">FOOTIFY</span></h1>
+          <p class="text-lg text-gray-600 mb-6">Temukan koleksi terbaik sepatu, dan style terbaikmu.</p>
+          <a href="#kategori-produk" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Lihat Koleksi</a>
         </div>
 
         <!-- Swiper Slider Gambar -->
@@ -70,6 +67,7 @@
                 </a>
               </div>
             </div>
+            <!-- Tombol navigasi opsional -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
@@ -79,61 +77,62 @@
   </section>
 
   <!-- Product Categories -->
-  <section class="py-16 bg-white text-gray-800">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Kategori Sepatu</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-
-        <!-- Casual -->
-        <div>
-          <a href="SEPATU.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
-            <img src="CASUAL.webp" alt="Casual" class="w-full h-56 object-cover">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold mb-2">Casual</h3>
-              <p class="text-gray-600">Sepatu casual stylish dan nyaman untuk segala aktivitas harianmu.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Formal -->
-        <div>
-          <a href="BAJU.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
-            <img src="FORMAL.webp" alt="Formal" class="w-full h-56 object-cover">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold mb-2">Formal</h3>
-              <p class="text-gray-600">Style formal yang cocok untuk pria .</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Sports -->
-        <div>
-          <a href="AKSESORI.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
-            <img src="SPORTS.webp" alt="Sports" class="w-full h-56 object-cover object-center">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold mb-2">Sports</h3>
-              <p class="text-gray-600">sepatu Sports pilihan untuk style dan olahraga.</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Women's Style -->
-        <div>
-          <a href="CELANA.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
-            <img src="Women's Style.webp" alt="Women's Style" class="w-full h-56 object-cover object-center">
-            <div class="p-4">
-              <h3 class="text-xl font-semibold mb-2">Women's Style</h3>
-              <p class="text-gray-600">Stylish untuk tampil percaya diri setiap hari.</p>
-            </div>
-          </a>
-        </div>
-
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Kategori Sepatu</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Casual -->
+      <div>
+        <a href="SEPATU.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
+          <img src="CASUAL.webp" alt="Casual" class="w-full h-56 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Casual</h3>
+            <p class="text-gray-600">Sepatu casual stylish dan nyaman untuk segala aktivitas harianmu.</p>
+          </div>
+        </a>
       </div>
+
+      <!-- Formal -->
+      <div>
+        <a href="BAJU.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
+          <img src="FORMAL.webp" alt="Formal" class="w-full h-56 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Formal</h3>
+            <p class="text-gray-600">Style formal yang cocok untuk pria .</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sports -->
+      <div>
+        <a href="AKSESORI.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
+          <img src="SPORTS.webp" alt="Sports" class="w-full h-56 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Sports</h3>
+            <p class="text-gray-600">sepatu Sports pilihan untuk style dan olahraga.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Women's Style -->
+      <div>
+        <a href="CELANA.HTML" class="border rounded-lg overflow-hidden shadow hover:shadow-lg transition block">
+          <img src="Women's Style.webp" alt="Women's Style" class="w-full h-56 object-cover object-center">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold mb-2">Women's Style</h3>
+            <p class="text-gray-600">Stylish untuk tampil percaya diri setiap hari.</p>
+          </div>
+        </a>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
-  <footer class="bg-[#0B0633] py-6 text-center text-sm text-gray-400">
+  <footer class="bg-gray-100 py-6 text-center text-sm text-gray-500">
     &copy; 2025 FOOTIFY. All rights reserved.
   </footer>
 
@@ -159,6 +158,7 @@
   </script>
 </body>
 </html>
+
 
 
 
