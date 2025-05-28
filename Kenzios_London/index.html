@@ -36,9 +36,29 @@
     .carousel-button:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
+
+    #navMenu {
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center relative">
+      <div>
+        <button onclick="toggleMenu()" class="text-xl font-bold text-blue-600 tracking-wide">FOOTIFY</button>
+      </div>
+      <nav id="navMenu" class="hidden absolute top-14 left-4 bg-white border border-gray-200 rounded-xl shadow-md py-2 w-44">
+        <a href="/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Home</a>
+        <a href="/pilihan_sepatu_casual/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Casual</a>
+        <a href="/pilihan_sepatu_sports/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Sports</a>
+        <a href="/pilihan_sepatu_formal/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Formal</a>
+        <a href="/pilihan_sepatu_wanita/" class="block px-4 py-2 hover:bg-gray-100 text-gray-700">Women’s Style</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Tombol Kembali -->
   <div class="max-w-4xl mx-auto mt-6 px-6">
@@ -112,7 +132,7 @@
     © 2025 FOOTIFY. All rights reserved.
   </footer>
 
-  <!-- Script Carousel -->
+  <!-- Script Carousel & Navbar -->
   <script>
     function setupSwipe(carouselId, trackId, isReview = false) {
       let startX = 0;
@@ -162,10 +182,24 @@
       track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
     }
 
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    window.addEventListener('click', function (e) {
+      const menu = document.getElementById('navMenu');
+      const button = e.target.closest('button');
+      if (!menu.contains(e.target) && !button) {
+        menu.classList.add('hidden');
+      }
+    });
+
     setupSwipe('mainCarousel', 'carouselTrack');
     setupSwipe('reviewCarousel', 'reviewTrack', true);
   </script>
 </body>
 </html>
+
 
 
