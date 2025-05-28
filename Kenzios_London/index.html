@@ -44,27 +44,29 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Floating Back to Category & FOOTIFY Logo with Dropdown -->
-<div class="fixed top-4 left-4 z-50 space-y-3">
+  <!-- Floating Back to Category & FOOTIFY Logo with Clickable Dropdown -->
+<div class="fixed top-4 left-4 z-50 flex flex-col items-start space-y-2">
   <!-- Back to Category -->
   <a href="/kategori.html" class="bg-white shadow-md border px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-gray-100 transition">
     ← Kembali ke Kategori
   </a>
 
-  <!-- FOOTIFY Dropdown -->
-  <div class="relative group inline-block">
-    <button class="bg-black text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg hover:bg-gray-800 transition">
+  <!-- FOOTIFY Logo with Dropdown -->
+  <div class="relative">
+    <button id="footifyBtn" onclick="toggleDropdown()" class="bg-black text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg hover:bg-gray-800 transition">
       FOOTIFY
     </button>
-    <div class="absolute hidden group-hover:block mt-2 bg-white border rounded-lg shadow-lg w-40 overflow-hidden">
-      <a href="/index.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Home</a>
-      <a href="/casual.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Casual</a>
-      <a href="/formal.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Formal</a>
-      <a href="/sports.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Sports</a>
-      <a href="/womens-style.html" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">Woman's Style</a>
+    <!-- Dropdown Menu -->
+    <div id="footifyDropdown" class="absolute left-0 mt-2 hidden flex-col bg-white border rounded-lg shadow-lg w-44 z-50">
+      <a href="/index.html" class="px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Home</a>
+      <a href="/casual.html" class="px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Casual</a>
+      <a href="/formal.html" class="px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Formal</a>
+      <a href="/sports.html" class="px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Sports</a>
+      <a href="/womens-style.html" class="px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Woman's Style</a>
     </div>
   </div>
 </div>
+
 
   
 <!-- Container Produk -->
@@ -199,5 +201,22 @@
   setupSwipe('reviewCarousel', 'reviewTrack', true);
 </script>
 
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById('footifyDropdown');
+    dropdown.classList.toggle('hidden');
+  }
+
+  // Klik di luar akan menutup dropdown
+  window.addEventListener('click', function (e) {
+    const dropdown = document.getElementById('footifyDropdown');
+    const button = document.getElementById('footifyBtn');
+    if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.add('hidden');
+    }
+  });
+</script>
+
+  
 </body>
 </html>
