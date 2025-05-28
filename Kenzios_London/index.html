@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beli Kenzios London 2.0 Full Black</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
   <style>
     .carousel-image, video.carousel-image {
       min-width: 100%;
@@ -43,197 +41,204 @@
     #navMenu {
       transition: all 0.3s ease;
     }
+
+    /* Animation classes */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-left {
+      transform: translateX(-40px);
+    }
+
+    .fade-right {
+      transform: translateX(40px);
+    }
+
+    .fade-left.visible,
+    .fade-right.visible {
+      transform: translateX(0);
+    }
   </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Floating Back to Category & FOOTIFY Logo with Dropdown -->
-<div class="fixed top-4 left-4 z-50 flex flex-col items-start space-y-2">
-  <!-- Kembali ke Kategori -->
-  <a href="/kategori.html" class="bg-white shadow-md border px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-gray-100 transition">
-    ← Kembali ke Kategori
-  </a>
-
-  <!-- Dropdown Container -->
-  <div class="relative group" id="dropdownContainer">
-    <!-- FOOTIFY Button -->
-    <div id="dropdownToggle"
-         class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg hover:bg-gray-800 transition cursor-pointer select-none">
-      FOOTIFY
-    </div>
-
-    <!-- Dropdown Menu -->
-    <div id="dropdownMenu"
-         class="absolute left-0 mt-2 w-44 bg-white border rounded-lg shadow-lg hidden group-hover:block z-50">
-      <a href="/index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Home</a>
-      <a href="/casual.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Casual</a>
-      <a href="/formal.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Formal</a>
-      <a href="/sports.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Sports</a>
-      <a href="/womens-style.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Woman's Style</a>
-    </div>
-  </div>
-</div>
-
-
-
-  
-<!-- Container Produk -->
-<div class="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
- <h1 data-aos="fade-right" data-aos-duration="800" class="mt-20 text-3xl md:text-4xl font-bold mb-2 text-center text-blue-600">Kenzios London 2.0 Full Black</h1>
-  <p data-aos="fade-left" data-aos-duration="800" class="text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria</p>
-
-  <!-- Carousel Gambar -->
-  <div class="relative overflow-hidden rounded-xl shadow mb-8" id="mainCarousel">
-    <div data-aos="fade-right" data-aos-duration="800" class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-      <img src="1.webp" alt="Gambar 1" class="carousel-image">
-      <img src="2.webp" alt="Gambar 2" class="carousel-image">
-      <img src="3.webp" alt="Gambar 3" class="carousel-image">
-      <img src="4.webp" alt="Gambar 4" class="carousel-image">
-      <img src="5.webp" alt="Gambar 5" class="carousel-image">
-    </div>
-    <div class="carousel-buttons">
-      <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-      <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- Info Produk -->
-  <div class="text-center space-y-1">
-    <p data-aos="fade-right" data-aos-duration="800" class="text-red-600 text-2xl font-bold">Rp397.300 <span data-aos="fade-left" data-aos-duration="800" class="line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
-    <p data-aos="fade-left" data-aos-duration="800" class="text-sm text-gray-600">Terjual: 2,1RB • Rating: <span data-aos="fade-right" data-aos-duration="800" class="text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
-    <p data-aos="fade-right" data-aos-duration="800" class="text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
-    <p data-aos="fade-left" data-aos-duration="800" class="text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
-  </div>
-
-  <!-- Tombol Beli -->
-  <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
-    <a href="https://appurl.io/NknigXZgL9"
-      data-aos="fade-right" data-aos-duration="800" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
-      Checkout di Shopee
+  <div class="fixed top-4 left-4 z-50 flex flex-col items-start space-y-2">
+    <a href="/kategori.html" class="bg-white shadow-md border px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-gray-100 transition">
+      ← Kembali ke Kategori
     </a>
-    <div class="text-center">
-      <p data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="top-bottom" class="font-medium mb-2">Scan QR untuk Checkout:</p>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-           alt="QR Code Shopee" data-aos="fade-right" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm">
+
+    <div class="relative group" id="dropdownContainer">
+      <div id="dropdownToggle" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg hover:bg-gray-800 transition cursor-pointer select-none">
+        FOOTIFY
+      </div>
+      <div id="dropdownMenu" class="absolute left-0 mt-2 w-44 bg-white border rounded-lg shadow-lg hidden group-hover:block z-50">
+        <a href="/index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Home</a>
+        <a href="/casual.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Casual</a>
+        <a href="/formal.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Formal</a>
+        <a href="/sports.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Sports</a>
+        <a href="/womens-style.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Woman's Style</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Review Section -->
-<div class="max-w-4xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-xl">
-  <h2 data-aos="fade-right" data-aos-duration="800" class="text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
-  <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
-    <div data-aos="fade-right" data-aos-duration="800" class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-      <img src="R1.webp" alt="Review 1" class="carousel-image">
-      <img src="R2.webp" alt="Review 2" class="carousel-image">
-      <video src="R3.mp4" class="carousel-image" controls playsinline>></video>
-      <img src="R4.webp" alt="Review 4" class="carousel-image"> 
-      <img src="R5.webp" alt="Review 5" class="carousel-image">
+  <!-- Container Produk -->
+  <div class="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
+    <h1 class="fade-section fade-right mt-20 text-3xl md:text-4xl font-bold mb-2 text-center text-blue-600">Kenzios London 2.0 Full Black</h1>
+    <p class="fade-section fade-left text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria</p>
+
+    <div class="relative overflow-hidden rounded-xl shadow mb-8" id="mainCarousel">
+      <div class="fade-section fade-right flex transition-transform duration-300 ease-in-out" id="carouselTrack">
+        <img src="1.webp" alt="Gambar 1" class="carousel-image">
+        <img src="2.webp" alt="Gambar 2" class="carousel-image">
+        <img src="3.webp" alt="Gambar 3" class="carousel-image">
+        <img src="4.webp" alt="Gambar 4" class="carousel-image">
+        <img src="5.webp" alt="Gambar 5" class="carousel-image">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+      </div>
     </div>
-    <div class="carousel-buttons">
-      <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-      <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
+
+    <div class="text-center space-y-1">
+      <p class="fade-section fade-right text-red-600 text-2xl font-bold">Rp397.300 <span class="fade-section fade-left line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
+      <p class="fade-section fade-left text-sm text-gray-600">Terjual: 2,1RB • Rating: <span class="fade-section fade-right text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
+      <p class="fade-section fade-right text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
+      <p class="fade-section fade-left text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
+    </div>
+
+    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
+      <a href="https://appurl.io/NknigXZgL9" class="fade-section fade-right bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
+        Checkout di Shopee
+      </a>
+      <div class="text-center">
+        <p class="fade-section fade-left font-medium mb-2">Scan QR untuk Checkout:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
+             alt="QR Code Shopee" class="fade-section fade-right mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm">
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Footer -->
-<footer class="text-center text-sm text-gray-400 py-6 mt-10">
-  © 2025 FOOTIFY. All rights reserved.
-</footer>
+  <!-- Review Section -->
+  <div class="max-w-4xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-xl">
+    <h2 class="fade-section fade-right text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
+    <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
+      <div class="fade-section fade-right flex transition-transform duration-300 ease-in-out" id="reviewTrack">
+        <img src="R1.webp" alt="Review 1" class="carousel-image">
+        <img src="R2.webp" alt="Review 2" class="carousel-image">
+        <video src="R3.mp4" class="carousel-image" controls playsinline></video>
+        <img src="R4.webp" alt="Review 4" class="carousel-image"> 
+        <img src="R5.webp" alt="Review 5" class="carousel-image">
+      </div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
 
-<!-- Script Carousel & Navbar -->
-<script>
-  function setupSwipe(carouselId, trackId, isReview = false) {
-    let startX = 0;
-    let currentIndex = 0;
-    const container = document.getElementById(carouselId);
-    const track = document.getElementById(trackId);
-    const slides = track.children.length;
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-400 py-6 mt-10">
+    © 2025 FOOTIFY. All rights reserved.
+  </footer>
 
-    container.addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
-    });
+  <!-- Script Carousel & Swipe -->
+  <script>
+    function setupSwipe(carouselId, trackId, isReview = false) {
+      let startX = 0;
+      let currentIndex = 0;
+      const container = document.getElementById(carouselId);
+      const track = document.getElementById(trackId);
+      const slides = track.children.length;
 
-    container.addEventListener('touchend', e => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = endX - startX;
-      const threshold = 50;
+      container.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+      });
 
-      if (diff > threshold) {
-        currentIndex = (currentIndex - 1 + slides) % slides;
-      } else if (diff < -threshold) {
-        currentIndex = (currentIndex + 1) % slides;
-      }
+      container.addEventListener('touchend', e => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+        const threshold = 50;
 
+        if (diff > threshold) {
+          currentIndex = (currentIndex - 1 + slides) % slides;
+        } else if (diff < -threshold) {
+          currentIndex = (currentIndex + 1) % slides;
+        }
+
+        const slideWidth = track.clientWidth;
+        track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+        if (isReview) reviewIndex = currentIndex;
+        else index = currentIndex;
+      });
+    }
+
+    let index = 0;
+    function moveSlide(direction) {
+      const track = document.getElementById('carouselTrack');
+      const slides = track.children.length;
+      index = (index + direction + slides) % slides;
       const slideWidth = track.clientWidth;
-      track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+      track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
+    }
 
-      if (isReview) reviewIndex = currentIndex;
-      else index = currentIndex;
+    let reviewIndex = 0;
+    function moveReviewSlide(direction) {
+      const track = document.getElementById('reviewTrack');
+      const slides = track.children.length;
+      reviewIndex = (reviewIndex + direction + slides) % slides;
+      const slideWidth = track.clientWidth;
+      track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
+    }
+
+    setupSwipe('mainCarousel', 'carouselTrack');
+    setupSwipe('reviewCarousel', 'reviewTrack', true);
+  </script>
+
+  <!-- Dropdown script -->
+  <script>
+    const toggle = document.getElementById('dropdownToggle');
+    const menu = document.getElementById('dropdownMenu');
+
+    toggle.addEventListener('click', function (e) {
+      menu.classList.toggle('hidden');
+      e.stopPropagation();
     });
-  }
 
-  let index = 0;
-  function moveSlide(direction) {
-    const track = document.getElementById('carouselTrack');
-    const slides = track.children.length;
-    index = (index + direction + slides) % slides;
-    const slideWidth = track.clientWidth;
-    track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
-  }
+    document.addEventListener('click', function (e) {
+      if (!document.getElementById('dropdownContainer').contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
 
-  let reviewIndex = 0;
-  function moveReviewSlide(direction) {
-    const track = document.getElementById('reviewTrack');
-    const slides = track.children.length;
-    reviewIndex = (reviewIndex + direction + slides) % slides;
-    const slideWidth = track.clientWidth;
-    track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
-  }
+  <!-- IntersectionObserver -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.15 });
 
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    menu.classList.toggle('hidden');
-  }
-
-  window.addEventListener('click', function (e) {
-    const menu = document.getElementById('navMenu');
-    const button = e.target.closest('button');
-    if (!menu.contains(e.target) && !button) {
-      menu.classList.add('hidden');
-    }
-  });
-
-  setupSwipe('mainCarousel', 'carouselTrack');
-  setupSwipe('reviewCarousel', 'reviewTrack', true);
-</script>
-
-<script>
-  const toggle = document.getElementById('dropdownToggle');
-  const menu = document.getElementById('dropdownMenu');
-
-  toggle.addEventListener('click', function (e) {
-    // Untuk mobile: toggle manual
-    menu.classList.toggle('hidden');
-    e.stopPropagation();
-  });
-
-  // Klik di luar untuk menutup
-  document.addEventListener('click', function (e) {
-    if (!document.getElementById('dropdownContainer').contains(e.target)) {
-      menu.classList.add('hidden');
-    }
-  });
-</script>
- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-   <script>
-AOS.init({
-  once: false,       // animasi bisa diulang
-  mirror: true        // scroll ke atas juga akan memicu animasi
-});
-</script>
+    document.querySelectorAll('.fade-section').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
