@@ -46,12 +46,15 @@
   background-color: #f3f4f6;
 }
 
-    
+    .dropdown-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 <!-- NAV ITEM -->
-<div class="relative group inline-block text-left">
+<div class="relative group inline-block text-left z-50">
   <!-- Trigger -->
   <button class="text-white font-semibold tracking-wide uppercase focus:outline-none">
     FOOTWEAR
@@ -59,8 +62,8 @@
   </button>
 
   <!-- Dropdown -->
-  <div class="absolute left-0 mt-3 w-44 bg-white shadow-lg rounded-none z-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-    <div class="flex flex-col px-4 py-3 space-y-2 text-black text-sm font-light">
+  <div class="absolute left-0 mt-3 w-48 bg-white dropdown-shadow z-50 rounded-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+    <div class="flex flex-col px-5 py-4 space-y-2 text-black text-base font-light">
       <a href="#" class="hover:font-medium transition">Active</a>
       <a href="#" class="hover:font-medium transition">Sandals</a>
       <a href="#" class="hover:font-medium transition">Signature</a>
@@ -69,6 +72,7 @@
     </div>
   </div>
 </div>
+
 
 
 
