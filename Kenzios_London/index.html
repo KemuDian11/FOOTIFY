@@ -2,17 +2,27 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Beli Kenzios London 2.0 Full Black</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
+    /* Carousel image aspect ratio & object-fit */
     .carousel-image, video.carousel-image {
-      min-width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
+      aspect-ratio: 4 / 3;
       object-fit: cover;
+      border-radius: 0.5rem;
+      width: 100%;
+      user-select: none;
     }
 
+    /* Carousel container overflow hidden */
+    #mainCarousel, #reviewCarousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
+
+    /* Carousel buttons */
     .carousel-buttons {
       position: absolute;
       top: 50%;
@@ -20,157 +30,118 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
+      pointer-events: none;
     }
-
     .carousel-button {
-      background-color: rgba(0, 0, 0, 0.5);
+      pointer-events: auto;
+      background-color: rgba(0,0,0,0.5);
       color: white;
       border: none;
       padding: 0.5rem 1rem;
       cursor: pointer;
       border-radius: 9999px;
+      transition: background-color 0.3s ease;
+    }
+    .carousel-button:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Smooth transition */
+    #carouselTrack, #reviewTrack {
+      transition: transform 0.4s ease-in-out;
     }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Tombol Kembali -->
-  <div class="max-w-5xl mx-auto mt-6 px-6">
-    <a href="https://footify.my.id/pilihan_sepatu_formal/" class="text-blue-600 hover:underline text-sm flex items-center mb-4">
+  <nav class="max-w-5xl mx-auto mt-6 px-6">
+    <a href="https://footify.my.id/pilihan_sepatu_formal/" class="text-blue-600 hover:underline text-sm flex items-center mb-6" aria-label="Kembali ke kategori sepatu formal">
       ← Kembali ke Kategori
     </a>
-  </div>
+  </nav>
 
   <!-- Container Produk -->
-  <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-xl">
-    <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center text-blue-600">Kenzios London 2.0 Full Black</h1>
-    <p class="text-center text-lg mb-6">100% Original | Sepatu Formal Pria Wanita </p>
+  <main class="max-w-5xl mx-auto p-8 bg-white shadow-lg rounded-xl">
+    <h1 class="text-4xl font-extrabold mb-4 text-center text-blue-700">Reebok Smash Edge - White</h1>
+    <p class="text-center text-lg mb-8 text-gray-600 font-medium tracking-wide">100% Original | Sepatu Formal Pria & Wanita</p>
 
-    <!-- Carousel Gambar -->
-    <div class="relative overflow-hidden mb-6" id="mainCarousel">
-      <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-        <img src="1.webp" alt="Gambar 1" class="carousel-image">
-        <img src="2.webp" alt="Gambar 2" class="carousel-image">
-        <img src="3.webp" alt="Gambar 3" class="carousel-image">
-        <img src="4.webp" alt="Gambar 4" class="carousel-image">
-        <img src="5.webp" alt="Gambar 5" class="carousel-image">
-      
-
-        
+    <section class="grid md:grid-cols-2 gap-10">
+      <!-- Carousel Gambar -->
+      <div aria-label="Galeri gambar produk" id="mainCarousel" tabindex="0">
+        <div class="flex" id="carouselTrack" style="width: 500%;">
+          <img src="1.webp" alt="Gambar sepatu 1" class="carousel-image flex-shrink-0" />
+          <img src="2.webp" alt="Gambar sepatu 2" class="carousel-image flex-shrink-0" />
+          <img src="3.webp" alt="Gambar sepatu 3" class="carousel-image flex-shrink-0" />
+          <img src="4.webp" alt="Gambar sepatu 4" class="carousel-image flex-shrink-0" />
+          <img src="5.webp" alt="Gambar sepatu 5" class="carousel-image flex-shrink-0" />
+        </div>
+        <div class="carousel-buttons" aria-label="Navigasi carousel gambar">
+          <button class="carousel-button" aria-label="Gambar sebelumnya" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="carousel-button" aria-label="Gambar berikutnya" onclick="moveSlide(1)">&#10095;</button>
+        </div>
       </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+
+      <!-- Info Produk -->
+      <div class="flex flex-col justify-center text-center md:text-left space-y-4">
+        <p class="text-3xl font-bold text-red-600">
+          Mulai Rp397.300 <span class="line-through text-gray-400 text-lg ml-3">Rp497.000</span>
+        </p>
+        <p class="text-sm text-gray-500 font-medium">Terjual: <span class="font-semibold">2,1RB</span></p>
+        <p class="text-yellow-500 text-xl font-semibold">⭐ 4,9 / 5.0</p>
+        <p><strong>Garansi tiba:</strong> 3-4 Hari</p>
+        <p><strong>Pengembalian:</strong> 15 Hari | <strong>100% ORIGINAL</strong></p>
+        <p class="text-gray-600 text-sm leading-relaxed max-w-md mx-auto md:mx-0">
+          Keaslian produk dijamin oleh Shopee dan dapat dilihat melalui tulisan <em>'Jaminan Shopee'</em> saat checkout.
+        </p>
+
+        <!-- Tombol Checkout -->
+        <a href="https://appurl.io/NknigXZgL9" target="_blank" rel="noopener noreferrer"
+          class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition duration-300">
+          CHECKOUT DI SHOPEE
+        </a>
+
+        <!-- QR Code -->
+        <div class="mt-6">
+          <p class="font-semibold mb-2">Scan untuk Checkout:</p>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
+               alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-md border border-gray-200" />
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Info -->
-    <div class="space-y-2 text-center">
-      <p class="text-red-600 text-2xl font-semibold">Mulai Rp397.300<span class="line-through text-gray-500 text-lg">Rp497.000</span></p>
-      <p class="text-sm text-gray-600">Terjual: 2,1RB</p>
-      <p class="text-yellow-500 text-lg">⭐ 4,9 / 5.0</p>
-      <p><strong>Garansi tiba:</strong> 3-4 Hari</p>
-      <p><strong>Pengembalian:</strong> 15 Hari | <strong>100% ORIGINAL</strong></p>
-      <p>Keaslian produk dijamin oleh Shopee dan dapat dilihat melalui tulisan 'Jaminan Shopee' saat checkout</p>
-      
-    </div>
+    <!-- Deskripsi -->
+    <section class="mt-12 max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-6 text-blue-700 border-b-2 border-blue-300 pb-2">Deskripsi Produk</h2>
+      <article class="prose prose-indigo max-w-none text-gray-700 leading-relaxed">
+        <p>Sepatu ini memiliki desain formal modern yang sangat eksklusif.</p>
+        <p>Dikombinasikan dengan outsole berteknologi microtech yang lentur, ditambah bagian dalam sepatu dibalut dengan bahan mesh lembut dan spon khusus pada bagian insole agar kaki terasa empuk dan nyaman. Cocok untuk urban people yang aktif berkegiatan di perkotaan.</p>
+        <p>Menunjang penampilan agar semakin menarik saat hang out di kafe bersama kerabat, namun tetap elegan dan profesional saat dipakai ke kantor.</p>
+        <ul>
+          <li>Warna: Hitam</li>
+          <li>Size: 39-44</li>
+          <li>Bahan Upper: Nappa Leather, Kulit Sapi Asli (bukan sintetis/imitasi)</li>
+          <li>Outsole: Microtech</li>
+          <li>Insole: LT spons, Mesh & Polyfoam (empuk dan nyaman)</li>
+          <li>Construction: Cementing + Press Machine</li>
+          <li>Tali: Tali elastis premium</li>
+        </ul>
+        <p>Penting: Material yang digunakan berbeda dari produk sejenis yang lebih murah. 100% kulit sapi asli dengan bahan baku terpilih, produk solid dan kokoh.</p>
+        <p>Pengiriman cepat, garansi produk, kemudahan penukaran ukuran, dan pengembalian uang jika produk tidak sesuai ekspektasi adalah fasilitas yang kami berikan demi kepuasan pelanggan.</p>
 
-    <!-- Tombol Beli -->
-   <!-- Checkout Shopee -->
-<div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-center">
-  <!-- Tombol -->
-  <a href="https://appurl.io/NknigXZgL9"
-     class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg">
-    CHECKOUT DI SHOPEE
-  </a>
+        <h3 class="mt-6 font-semibold">Size Chart</h3>
+        <table class="w-full text-left border-collapse border border-gray-300">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="border border-gray-300 px-3 py-2">Ukuran</th>
+              <th class="border border-gray-300 px-3 py-2">Panjang (cm)</th>
+              <th class="border border-gray-300 px-3 py-2">Lebar (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-3 py-1">39</td><td class="border border-gray-300 px-3 py-1">24,5</td><td class="border border-gray-300 px-3 py-1">9,5</td></tr>
+            <tr><td class="border border-gray-300 px-3 py-1">40</td><td class="border border-gray-300 px-3 py-1">25</td><td class="border border-gray-300 px-3 py-1">9,5</td></tr>
+            <tr><td class="border border-gray-300 px-3 py-1">41</td><td class="border border-gray-300 px-3 py-1">26</td><td class="border border-gray-300 px-3 py-1">10</td></tr>
+            <tr><td class="border border-gray-300 px-3 py-1">42</td><td class="border border-gray-300 px-3 py-1">26,5</td><td class="border border-gray-300 px-3 py-1">10</td></tr>
+            <tr><td class="border border-gray-300 px-3 py-1">43</
 
-  <!-- QR Code -->
-  <div class="text-center">
-    <p class="font-semibold mb-2">Scan untuk Checkout:</p>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-         alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-md border border-gray-200">
-  </div>
-</div>
-
-
-  
-  <!-- Review -->
-  <div class="max-w-5xl mx-auto p-6 mt-10 bg-white rounded-xl shadow-md">
-    <h2 class="text-2xl font-semibold text-center mb-4 text-blue-600">Foto Review Pembeli</h2>
-    <div class="relative overflow-hidden" id="reviewCarousel">
-      <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-      <img src="R1.webp" alt="Review 1" class="carousel-image">
-        <img src="R2.webp" alt="Review 2" class="carousel-image">
-       <video src="R3.mp4" class="carousel-image" controls></video>
-        <img src="R4.webp" alt="Review 4" class="carousel-image"> 
-       <img src="R5.webp" alt="Review 5" class="carousel-image">
-        
-        
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-6 mt-10">
-    © 2025 FOOTIFY. All rights reserved.
-  </footer>
-
-  <!-- Script -->
-  <script>
-    function setupSwipe(carouselId, trackId, isReview = false) {
-      let startX = 0;
-      let currentIndex = 0;
-      const container = document.getElementById(carouselId);
-      const track = document.getElementById(trackId);
-      const slides = track.children.length;
-
-      container.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-      });
-
-      container.addEventListener('touchend', e => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = endX - startX;
-        const threshold = 50;
-
-        if (diff > threshold) {
-          currentIndex = (currentIndex - 1 + slides) % slides;
-        } else if (diff < -threshold) {
-          currentIndex = (currentIndex + 1) % slides;
-        }
-
-        const slideWidth = track.clientWidth;
-        track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-
-        if (isReview) reviewIndex = currentIndex;
-        else index = currentIndex;
-      });
-    }
-
-    let index = 0;
-    function moveSlide(direction) {
-      const track = document.getElementById('carouselTrack');
-      const slides = track.children.length;
-      index = (index + direction + slides) % slides;
-      const slideWidth = track.clientWidth;
-      track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
-    }
-
-    let reviewIndex = 0;
-    function moveReviewSlide(direction) {
-      const track = document.getElementById('reviewTrack');
-      const slides = track.children.length;
-      reviewIndex = (reviewIndex + direction + slides) % slides;
-      const slideWidth = track.clientWidth;
-      track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
-    }
-
-    setupSwipe('mainCarousel', 'carouselTrack');
-    setupSwipe('reviewCarousel', 'reviewTrack', true);
-  </script>
-</body>
-</html>
