@@ -40,183 +40,140 @@
     #navMenu {
       transition: all 0.3s ease;
     }
-
-
-#floating-back:hover {
-  background-color: #f3f4f6;
-}
-
-    .dropdown-shadow {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-}
-
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
-<!-- NAV ITEM -->
-<div class="relative group inline-block text-left z-50">
-  <!-- Trigger -->
-  <button class="text-white font-semibold tracking-wide uppercase focus:outline-none">
-    FOOTWEAR
-    <div class="w-full h-0.5 bg-white mt-1"></div> <!-- underline tipis -->
-  </button>
+<!-- Container Produk -->
+<div class="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
+  <h1 class="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-800">Kenzios London 2.0 Full Black</h1>
+  <p class="text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria & Wanita</p>
 
-  <!-- Dropdown -->
-  <div class="absolute left-0 mt-3 w-48 bg-white dropdown-shadow z-50 rounded-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-    <div class="flex flex-col px-5 py-4 space-y-2 text-black text-base font-light">
-      <a href="#" class="hover:font-medium transition">Active</a>
-      <a href="#" class="hover:font-medium transition">Sandals</a>
-      <a href="#" class="hover:font-medium transition">Signature</a>
-      <a href="#" class="hover:font-medium transition">Sneakers</a>
-      <a href="#" class="hover:font-medium transition">Size Guide</a>
+  <!-- Carousel Gambar -->
+  <div class="relative overflow-hidden rounded-xl shadow mb-8" id="mainCarousel">
+    <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
+      <img src="1.webp" alt="Gambar 1" class="carousel-image">
+      <img src="2.webp" alt="Gambar 2" class="carousel-image">
+      <img src="3.webp" alt="Gambar 3" class="carousel-image">
+      <img src="4.webp" alt="Gambar 4" class="carousel-image">
+      <img src="5.webp" alt="Gambar 5" class="carousel-image">
+    </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Info Produk -->
+  <div class="text-center space-y-1">
+    <p class="text-red-600 text-2xl font-bold">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
+    <p class="text-sm text-gray-600">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
+    <p class="text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
+    <p class="text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
+  </div>
+
+  <!-- Tombol Beli -->
+  <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
+    <a href="https://appurl.io/NknigXZgL9"
+       class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
+      Checkout di Shopee
+    </a>
+    <div class="text-center">
+      <p class="font-medium mb-2">Scan QR untuk Checkout:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
+           alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm">
     </div>
   </div>
 </div>
 
-
-
-
-
-
-  <!-- Container Produk -->
-  <div class="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
-    <h1 class="text-3xl md:text-4xl font-bold mb-2 text-center text-gray-800">Kenzios London 2.0 Full Black</h1>
-    <p class="text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria & Wanita</p>
-
-    <!-- Carousel Gambar -->
-    <div class="relative overflow-hidden rounded-xl shadow mb-8" id="mainCarousel">
-      <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-        <img src="1.webp" alt="Gambar 1" class="carousel-image">
-        <img src="2.webp" alt="Gambar 2" class="carousel-image">
-        <img src="3.webp" alt="Gambar 3" class="carousel-image">
-        <img src="4.webp" alt="Gambar 4" class="carousel-image">
-        <img src="5.webp" alt="Gambar 5" class="carousel-image">
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
-      </div>
+<!-- Review Section -->
+<div class="max-w-4xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-xl">
+  <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
+  <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
+    <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
+      <img src="R1.webp" alt="Review 1" class="carousel-image">
+      <img src="R2.webp" alt="Review 2" class="carousel-image">
+      <video src="R3.mp4" class="carousel-image" controls></video>
+      <img src="R4.webp" alt="Review 4" class="carousel-image"> 
+      <img src="R5.webp" alt="Review 5" class="carousel-image">
     </div>
-
-    <!-- Info Produk -->
-    <div class="text-center space-y-1">
-      <p class="text-red-600 text-2xl font-bold">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
-      <p class="text-sm text-gray-600">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
-      <p class="text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
-      <p class="text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
-    </div>
-
-    <!-- Tombol Beli -->
-    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
-      <a href="https://appurl.io/NknigXZgL9"
-         class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
-        Checkout di Shopee
-      </a>
-      <div class="text-center">
-        <p class="font-medium mb-2">Scan QR untuk Checkout:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-             alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm">
-      </div>
+    <div class="carousel-buttons">
+      <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
+      <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
     </div>
   </div>
+</div>
 
-  <!-- Review Section -->
-  <div class="max-w-4xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-xl">
-    <h2 class="text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
-    <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
-      <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-        <img src="R1.webp" alt="Review 1" class="carousel-image">
-        <img src="R2.webp" alt="Review 2" class="carousel-image">
-        <video src="R3.mp4" class="carousel-image" controls></video>
-        <img src="R4.webp" alt="Review 4" class="carousel-image"> 
-        <img src="R5.webp" alt="Review 5" class="carousel-image">
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
-      </div>
-    </div>
-  </div>
+<!-- Footer -->
+<footer class="text-center text-sm text-gray-400 py-6 mt-10">
+  © 2025 FOOTIFY. All rights reserved.
+</footer>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm text-gray-400 py-6 mt-10">
-    © 2025 FOOTIFY. All rights reserved.
-  </footer>
+<!-- Script Carousel & Navbar -->
+<script>
+  function setupSwipe(carouselId, trackId, isReview = false) {
+    let startX = 0;
+    let currentIndex = 0;
+    const container = document.getElementById(carouselId);
+    const track = document.getElementById(trackId);
+    const slides = track.children.length;
 
-  <!-- Script Carousel & Navbar -->
-  <script>
-    function setupSwipe(carouselId, trackId, isReview = false) {
-      let startX = 0;
-      let currentIndex = 0;
-      const container = document.getElementById(carouselId);
-      const track = document.getElementById(trackId);
-      const slides = track.children.length;
-
-      container.addEventListener('touchstart', e => {
-        startX = e.touches[0].clientX;
-      });
-
-      container.addEventListener('touchend', e => {
-        const endX = e.changedTouches[0].clientX;
-        const diff = endX - startX;
-        const threshold = 50;
-
-        if (diff > threshold) {
-          currentIndex = (currentIndex - 1 + slides) % slides;
-        } else if (diff < -threshold) {
-          currentIndex = (currentIndex + 1) % slides;
-        }
-
-        const slideWidth = track.clientWidth;
-        track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
-
-        if (isReview) reviewIndex = currentIndex;
-        else index = currentIndex;
-      });
-    }
-
-    let index = 0;
-    function moveSlide(direction) {
-      const track = document.getElementById('carouselTrack');
-      const slides = track.children.length;
-      index = (index + direction + slides) % slides;
-      const slideWidth = track.clientWidth;
-      track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
-    }
-
-    let reviewIndex = 0;
-    function moveReviewSlide(direction) {
-      const track = document.getElementById('reviewTrack');
-      const slides = track.children.length;
-      reviewIndex = (reviewIndex + direction + slides) % slides;
-      const slideWidth = track.clientWidth;
-      track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
-    }
-
-    function toggleMenu() {
-      const menu = document.getElementById('navMenu');
-      menu.classList.toggle('hidden');
-    }
-
-    window.addEventListener('click', function (e) {
-      const menu = document.getElementById('navMenu');
-      const button = e.target.closest('button');
-      if (!menu.contains(e.target) && !button) {
-        menu.classList.add('hidden');
-      }
+    container.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
     });
 
-    setupSwipe('mainCarousel', 'carouselTrack');
-    setupSwipe('reviewCarousel', 'reviewTrack', true);
-  </script>
+    container.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+      const threshold = 50;
 
-<a href="https://footify.my.id/pilihan_sepatu_formal/" id="floating-back">
-  ← Kembali ke Kategori
-</a>
+      if (diff > threshold) {
+        currentIndex = (currentIndex - 1 + slides) % slides;
+      } else if (diff < -threshold) {
+        currentIndex = (currentIndex + 1) % slides;
+      }
 
-  
+      const slideWidth = track.clientWidth;
+      track.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+
+      if (isReview) reviewIndex = currentIndex;
+      else index = currentIndex;
+    });
+  }
+
+  let index = 0;
+  function moveSlide(direction) {
+    const track = document.getElementById('carouselTrack');
+    const slides = track.children.length;
+    index = (index + direction + slides) % slides;
+    const slideWidth = track.clientWidth;
+    track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
+  }
+
+  let reviewIndex = 0;
+  function moveReviewSlide(direction) {
+    const track = document.getElementById('reviewTrack');
+    const slides = track.children.length;
+    reviewIndex = (reviewIndex + direction + slides) % slides;
+    const slideWidth = track.clientWidth;
+    track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
+  }
+
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  window.addEventListener('click', function (e) {
+    const menu = document.getElementById('navMenu');
+    const button = e.target.closest('button');
+    if (!menu.contains(e.target) && !button) {
+      menu.classList.add('hidden');
+    }
+  });
+
+  setupSwipe('mainCarousel', 'carouselTrack');
+  setupSwipe('reviewCarousel', 'reviewTrack', true);
+</script>
+
 </body>
 </html>
-
-
-
