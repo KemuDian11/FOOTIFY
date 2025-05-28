@@ -66,20 +66,24 @@
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- Floating Navigation Bar -->
-<div class="fixed top-4 left-4 z-50 group cursor-pointer">
-  <div class="bg-white text-blue-700 font-bold text-xl px-5 py-2 rounded-full shadow-lg">
-    FOOTIFY
-  </div>
+<div class="fixed top-4 left-4 z-50 cursor-pointer">
+  <div class="group relative inline-block">
+    <!-- Logo -->
+    <div class="bg-white text-blue-700 font-bold text-xl px-5 py-2 rounded-full shadow-lg">
+      FOOTIFY
+    </div>
 
-  <!-- Dropdown menu muncul saat hover -->
-  <div class="absolute left-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-    <a href="/" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-    <a href="/casual" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Casual</a>
-    <a href="/sports" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Sports</a>
-    <a href="/formal" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Formal</a>
-    <a href="/womens" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Women’s Style</a>
+    <!-- Dropdown: tetap satu bingkai dengan logo -->
+    <div class="absolute left-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+      <a href="/" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+      <a href="/casual" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Casual</a>
+      <a href="/sports" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Sports</a>
+      <a href="/formal" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Formal</a>
+      <a href="/womens" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Women’s Style</a>
+    </div>
   </div>
 </div>
+
 
 
   <!-- Container Produk -->
