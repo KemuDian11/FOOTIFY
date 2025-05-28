@@ -40,6 +40,27 @@
     #navMenu {
       transition: all 0.3s ease;
     }
+
+#floating-back {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 40;
+  background-color: white;
+  color: #2563eb;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+#floating-back:hover {
+  background-color: #f3f4f6;
+}
+
+    
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
@@ -198,6 +219,12 @@
     setupSwipe('mainCarousel', 'carouselTrack');
     setupSwipe('reviewCarousel', 'reviewTrack', true);
   </script>
+
+<a href="https://footify.my.id/pilihan_sepatu_formal/" id="floating-back">
+  ← Kembali ke Kategori
+</a>
+
+  
 </body>
 </html>
 
