@@ -79,12 +79,12 @@
   
 <!-- Container Produk -->
 <div class="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-2xl">
- <h1 data-aos="fade-right" class="mt-20 text-3xl md:text-4xl font-bold mb-2 text-center text-blue-600">Kenzios London 2.0 Full Black</h1>
-  <p data-aos="fade-left" class="text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria</p>
+ <h1 data-aos="fade-right" data-aos-duration="800 class="mt-20 text-3xl md:text-4xl font-bold mb-2 text-center text-blue-600">Kenzios London 2.0 Full Black</h1>
+  <p data-aos="fade-left" data-aos-duration="800 class="text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria</p>
 
   <!-- Carousel Gambar -->
   <div class="relative overflow-hidden rounded-xl shadow mb-8" id="mainCarousel">
-    <div data-aos="fade-right" class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
+    <div data-aos="fade-right" data-aos-duration="800 class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
       <img src="1.webp" alt="Gambar 1" class="carousel-image">
       <img src="2.webp" alt="Gambar 2" class="carousel-image">
       <img src="3.webp" alt="Gambar 3" class="carousel-image">
@@ -99,20 +99,20 @@
 
   <!-- Info Produk -->
   <div class="text-center space-y-1">
-    <p data-aos="fade-right" class="text-red-600 text-2xl font-bold">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
-    <p data-aos="fade-left" class="text-sm text-gray-600">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
-    <p data-aos="fade-right" class="text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
-    <p data-aos="fade-left" class="text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
+    <p data-aos="fade-right" data-aos-duration="800" class="text-red-600 text-2xl font-bold">Rp397.300 <span data-aos="fade-left" data-aos-duration="800" class="line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
+    <p data-aos="fade-left" data-aos-duration="800" class="text-sm text-gray-600">Terjual: 2,1RB • Rating: <span data-aos="fade-right" data-aos-duration="800" class="text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
+    <p data-aos="fade-right" data-aos-duration="800" class="text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
+    <p data-aos="fade-left" data-aos-duration="800" class="text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
   </div>
 
   <!-- Tombol Beli -->
   <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
     <a href="https://appurl.io/NknigXZgL9"
-      data-aos="fade-right" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
+      data-aos="fade-right" data-aos-duration="800" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
       Checkout di Shopee
     </a>
     <div class="text-center">
-      <p data-aos="fade-left" class="font-medium mb-2">Scan QR untuk Checkout:</p>
+      <p data-aos="fade-left" data-aos-duration="800" class="font-medium mb-2">Scan QR untuk Checkout:</p>
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
            alt="QR Code Shopee" data-aos="fade-right" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm">
     </div>
@@ -121,9 +121,9 @@
 
 <!-- Review Section -->
 <div class="max-w-4xl mx-auto p-6 mt-10 bg-white rounded-2xl shadow-xl">
-  <h2 data-aos="fade-right" class="text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
+  <h2 data-aos="fade-right" data-aos-duration="800" class="text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
   <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
-    <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
+    <div data-aos="fade-right" data-aos-duration="800" class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
       <img src="R1.webp" alt="Review 1" class="carousel-image">
       <img src="R2.webp" alt="Review 2" class="carousel-image">
       <video src="R3.mp4" class="carousel-image" controls></video>
@@ -227,10 +227,10 @@
   });
 </script>
 
-<!-- AOS JS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    once: false, // animasi bisa diulang tiap kali masuk viewport
+  });
 </script>
 
   
