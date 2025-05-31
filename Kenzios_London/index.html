@@ -119,68 +119,67 @@
   </div>
 
   <!-- Produk utama -->
-  <div class="max-w-6xl mx-auto mt-20 p-4 grid md:grid-cols-2 gap-6 bg-gray-200 rounded-2xl shadow-lg">
-    <!-- KIRI: Carousel + Review -->
-    <div>
-      <!-- Carousel Produk -->
-      <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel">
-        <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-          <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image">
-          <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image">
-          <img src="3.webp" alt="Detail material sepatu" class="carousel-image">
-          <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image">
-          <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image">
-        </div>
-        <div class="carousel-buttons">
-          <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-          <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
-        </div>
+<div class="max-w-6xl mx-auto mt-20 p-4 grid md:grid-cols-2 gap-6 bg-gray-200 rounded-2xl shadow-lg min-h-[600px]">
+  <!-- KIRI: Carousel + Review -->
+  <div class="flex flex-col">
+    <!-- Carousel Produk -->
+    <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel">
+      <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
+        <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image">
+        <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image">
+        <img src="3.webp" alt="Detail material sepatu" class="carousel-image">
+        <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image">
+        <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image">
       </div>
-      <div class="flex justify-center gap-2 mb-4" id="carouselIndicators"></div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+    <div class="flex justify-center gap-2 mb-4" id="carouselIndicators"></div>
 
-      <!-- Foto Review -->
-      <h2 class="text-xl font-semibold text-center text-gray-800 mb-2">Foto & Video Review</h2>
-      <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel">
-        <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-          <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2">
-          <img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2">
-          <img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2">
-          <img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2">
-        </div>
-        <div class="carousel-buttons">
-          <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-          <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
-        </div>
+    <!-- Foto Review -->
+    <h2 class="text-xl font-semibold text-center text-gray-800 mb-2">Foto & Video Review</h2>
+    <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel">
+      <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
+        <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2">
+        <img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2">
+        <img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2">
+        <img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2">
       </div>
-      <div class="flex justify-center gap-2 mt-4" id="reviewIndicators"></div>
+      <div class="carousel-buttons">
+        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
+      </div>
+    </div>
+    <div class="flex justify-center gap-2 mt-4" id="reviewIndicators"></div>
+  </div>
+
+  <!-- KANAN: Info Produk -->
+  <div class="flex flex-col justify-start space-y-6">
+    <h1 class="text-3xl md:text-4xl font-bold text-blue-600 fade-section fade-right">Kenzios London 2.0 Full Black</h1>
+    <p class="text-lg text-gray-600 fade-section fade-left">100% Original | Sepatu Formal Pria</p>
+
+    <div class="space-y-1">
+      <p class="text-red-600 text-2xl font-bold fade-section fade-right">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal fade-section fade-left">Rp497.000</span></p>
+      <p class="text-sm text-gray-600 fade-section fade-left">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold fade-section fade-right">⭐ 4,9 / 5.0</span></p>
+      <p class="text-sm text-gray-600 fade-section fade-right">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
+      <p class="text-sm text-gray-500 fade-section fade-left">Keaslian dijamin oleh Shopee melalui <strong>'Jaminan Shopee'</strong>.</p>
     </div>
 
-    <!-- KANAN: Info Produk -->
-    <div class="flex flex-col justify-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-2 text-blue-600 fade-section fade-right">Kenzios London 2.0 Full Black</h1>
-      <p class="text-lg mb-4 text-gray-600 fade-section fade-left">100% Original | Sepatu Formal Pria</p>
-
-      <!-- Harga & Info -->
-      <div class="space-y-1 mb-6">
-        <p class="text-red-600 text-2xl font-bold fade-section fade-right">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal fade-section fade-left">Rp497.000</span></p>
-        <p class="text-sm text-gray-600 fade-section fade-left">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold fade-section fade-right">⭐ 4,9 / 5.0</span></p>
-        <p class="text-sm text-gray-600 fade-section fade-right">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
-        <p class="text-sm text-gray-500 fade-section fade-left">Keaslian dijamin oleh Shopee melalui <strong>'Jaminan Shopee'</strong>.</p>
-      </div>
-
-      <!-- CTA -->
-      <div class="flex flex-col gap-4 items-center">
-        <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right">
-          Checkout di Shopee
-        </a>
-        <div class="text-center">
-          <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-               alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right">
-        </div>
+    <div class="flex flex-col gap-4 items-center">
+      <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right">
+        Checkout di Shopee
+      </a>
+      <div class="text-center">
+        <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
+             alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right">
       </div>
     </div>
   </div>
+</div>
+
 
   <script>
     // Carousel Produk
