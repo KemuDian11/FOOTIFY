@@ -6,6 +6,13 @@
   <title>Beli Kenzios London 2.0 Full Black</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+#reviewCarousel .carousel-image {
+  object-fit: contain;
+  padding: 1rem;
+  background-color: white;
+}
+
+    
     .carousel-image, video.carousel-image {
   min-width: 100%;
   height: 100%;
@@ -145,16 +152,16 @@
     </div>
   </div>
 
-  <!-- Review Section -->
-  <div class="relative overflow-hidden rounded-xl shadow mx-auto max-w-2xl h-[360px] md:h-[400px]" id="reviewCarousel">
+<!-- Review Section -->
+<div class="relative overflow-hidden rounded-xl shadow mx-auto max-w-2xl aspect-video bg-black" id="reviewCarousel">
     <h2 class="fade-section fade-right text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
     <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
       <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-        <img src="R1.webp" alt="Review pembeli 1" class="carousel-image">
-        <img src="R2.webp" alt="Review pembeli 2" class="carousel-image">
-        
-        <img src="R4.webp" alt="Review pembeli 4" class="carousel-image">
-        <img src="R5.webp" alt="Review pembeli 5" class="carousel-image">
+       <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2">
+<img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2">
+<img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2">
+<img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2">
+
       </div>
       <div class="carousel-buttons">
         <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
