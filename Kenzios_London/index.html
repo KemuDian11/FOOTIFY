@@ -29,6 +29,7 @@
       transform: translateY(-50%);
       padding: 0 1rem;
       pointer-events: auto;
+      user-select: none;
     }
 
     .carousel-button {
@@ -104,11 +105,11 @@
   <a href="/kategori.html" class="bg-white shadow-md border px-5 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-gray-100 transition">
     ← Kembali ke Kategori
   </a>
-  <div class="relative group" id="dropdownContainer">
+  <div class="relative" id="dropdownContainer">
     <div id="dropdownToggle" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-base shadow-lg hover:bg-gray-800 transition cursor-pointer select-none">
       FOOTIFY
     </div>
-    <div id="dropdownMenu" class="absolute left-0 top-12 w-44 bg-white border rounded-lg shadow-lg hidden group-hover:block z-50">
+    <div id="dropdownMenu" class="absolute left-0 top-12 w-44 bg-white border rounded-lg shadow-lg hidden z-50">
       <a href="/index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Home</a>
       <a href="/casual.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Casual</a>
       <a href="/formal.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Formal</a>
@@ -118,45 +119,46 @@
   </div>
 </div>
 
-  <!-- Produk utama -->
+<!-- Produk utama -->
 <div class="max-w-6xl mx-auto mt-10 p-4 grid md:grid-cols-2 gap-6 bg-gray-200 rounded-2xl shadow-lg min-h-[600px]">
   <!-- KIRI: Carousel + Review -->
   <div class="flex flex-col">
     <!-- Carousel Produk -->
-    <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel">
+    <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel" aria-label="Carousel produk sepatu">
       <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-        <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image">
-        <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image">
-        <img src="3.webp" alt="Detail material sepatu" class="carousel-image">
-        <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image">
-        <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image">
+        <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image" loading="lazy">
+        <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image" loading="lazy">
+        <img src="3.webp" alt="Detail material sepatu" class="carousel-image" loading="lazy">
+        <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image" loading="lazy">
+        <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image" loading="lazy">
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+        <button class="carousel-button" onclick="moveSlide(-1)" aria-label="Slide sebelumnya" title="Slide sebelumnya">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide(1)" aria-label="Slide selanjutnya" title="Slide selanjutnya">&#10095;</button>
       </div>
     </div>
-    <div class="flex justify-center gap-2 mb-4" id="carouselIndicators"></div>
+    <div class="flex justify-center gap-2 mb-4" id="carouselIndicators" role="tablist" aria-label="Indikator slide produk"></div>
 
     <!-- Foto Review -->
     <h2 class="text-xl font-semibold text-center text-gray-800 mb-2">Foto & Video Review</h2>
-    <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel">
+    <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel" aria-label="Carousel review pembeli">
       <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-        <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2">
-        <img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2">
-        <img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2">
-        <img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2">
+        <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2" loading="lazy">
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
+        <button class="carousel-button" onclick="moveReviewSlide(-1)" aria-label="Review slide sebelumnya" title="Review slide sebelumnya">&#10094;</button>
+        <button class="carousel-button" onclick="moveReviewSlide(1)" aria-label="Review slide selanjutnya" title="Review slide selanjutnya">&#10095;</button>
       </div>
     </div>
-    <div class="flex justify-center gap-2 mt-4" id="reviewIndicators"></div>
+    <div class="flex justify-center gap-2 mt-4" id="reviewIndicators" role="tablist" aria-label="Indikator slide review"></div>
   </div>
 
   <!-- KANAN: Info Produk -->
   <div class="flex flex-col justify-start space-y-6">
+    <p class="text-sm font-semibold text-gray-600 uppercase fade-section fade-left mb-1">Prestige 👑: sleek–elegant–premium</p>
     <h1 class="text-3xl md:text-4xl font-bold text-blue-600 fade-section fade-right">Kenzios London 2.0 Full Black</h1>
     <p class="text-lg text-gray-600 fade-section fade-left">100% Original | Sepatu Formal Pria</p>
 
@@ -168,146 +170,149 @@
     </div>
 
     <div class="flex flex-col gap-4 items-center">
-      <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right">
+      <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right" target="_blank" rel="noopener noreferrer">
         Checkout di Shopee
       </a>
       <div class="text-center">
         <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-             alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right">
+             alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right" loading="lazy">
       </div>
     </div>
   </div>
 </div>
 
+<script>
+  // Carousel Produk
+  const carouselTrack = document.getElementById('carouselTrack');
+  const carouselImages = carouselTrack.children;
+  const totalSlides = carouselImages.length;
+  let currentIndex = 0;
 
-  <script>
-    // Carousel Produk
-    const carouselTrack = document.getElementById('carouselTrack');
-    const carouselImages = carouselTrack.children;
-    const totalSlides = carouselImages.length;
-    let currentIndex = 0;
+  const indicators = document.getElementById('carouselIndicators');
 
-    const indicators = document.getElementById('carouselIndicators');
+  function updateCarousel() {
+    carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    updateIndicators();
+  }
 
-    function updateCarousel() {
-      carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-      updateIndicators();
-    }
-
-    function moveSlide(direction) {
-      currentIndex += direction;
-      if (currentIndex < 0) currentIndex = totalSlides - 1;
-      if (currentIndex >= totalSlides) currentIndex = 0;
-      updateCarousel();
-    }
-
-    // buat indikator carousel
-    function createIndicators() {
-      for(let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('button');
-        dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
-        dot.setAttribute('aria-label', `Slide ${i+1}`);
-        dot.onclick = () => {
-          currentIndex = i;
-          updateCarousel();
-        };
-        indicators.appendChild(dot);
-      }
-    }
-
-    function updateIndicators() {
-      const dots = indicators.children;
-      for(let i=0; i<dots.length; i++) {
-        dots[i].classList.remove('bg-gray-600');
-        dots[i].classList.add('bg-gray-400');
-      }
-      if(dots[currentIndex]) {
-        dots[currentIndex].classList.add('bg-gray-600');
-        dots[currentIndex].classList.remove('bg-gray-400');
-      }
-    }
-
-    createIndicators();
+  function moveSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
     updateCarousel();
+  }
 
-    // Carousel Review
-    const reviewTrack = document.getElementById('reviewTrack');
-    const reviewImages = reviewTrack.children;
-    const totalReviewSlides = reviewImages.length;
-    let currentReviewIndex = 0;
-
-    const reviewIndicators = document.getElementById('reviewIndicators');
-
-    function updateReviewCarousel() {
-      reviewTrack.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
-      updateReviewIndicators();
+  // buat indikator carousel
+  function createIndicators() {
+    for(let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('button');
+      dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
+      dot.setAttribute('aria-label', `Slide ${i+1}`);
+      dot.setAttribute('role', 'tab');
+      dot.onclick = () => {
+        currentIndex = i;
+        updateCarousel();
+      };
+      indicators.appendChild(dot);
     }
+  }
 
-    function moveReviewSlide(direction) {
-      currentReviewIndex += direction;
-      if (currentReviewIndex < 0) currentReviewIndex = totalReviewSlides - 1;
-      if (currentReviewIndex >= totalReviewSlides) currentReviewIndex = 0;
-      updateReviewCarousel();
+  function updateIndicators() {
+    for(let i = 0; i < indicators.children.length; i++) {
+      indicators.children[i].classList.toggle('bg-blue-600', i === currentIndex);
+      indicators.children[i].classList.toggle('bg-gray-400', i !== currentIndex);
     }
+  }
 
-    // buat indikator review carousel
-    function createReviewIndicators() {
-      for(let i = 0; i < totalReviewSlides; i++) {
-        const dot = document.createElement('button');
-        dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
-        dot.setAttribute('aria-label', `Review Slide ${i+1}`);
-        dot.onclick = () => {
-          currentReviewIndex = i;
-          updateReviewCarousel();
-        };
-        reviewIndicators.appendChild(dot);
-      }
-    }
+  createIndicators();
+  updateCarousel();
 
-    function updateReviewIndicators() {
-      const dots = reviewIndicators.children;
-      for(let i=0; i<dots.length; i++) {
-        dots[i].classList.remove('bg-gray-600');
-        dots[i].classList.add('bg-gray-400');
-      }
-      if(dots[currentReviewIndex]) {
-        dots[currentReviewIndex].classList.add('bg-gray-600');
-        dots[currentReviewIndex].classList.remove('bg-gray-400');
-      }
-    }
+  setInterval(() => moveSlide(1), 5000);
 
-    createReviewIndicators();
+  // Carousel Review
+  const reviewTrack = document.getElementById('reviewTrack');
+  const reviewImages = reviewTrack.children;
+  const totalReviewSlides = reviewImages.length;
+  let currentReviewIndex = 0;
+
+  const reviewIndicators = document.getElementById('reviewIndicators');
+
+  function updateReviewCarousel() {
+    reviewTrack.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+    updateReviewIndicators();
+  }
+
+  function moveReviewSlide(direction) {
+    currentReviewIndex += direction;
+    if (currentReviewIndex < 0) currentReviewIndex = totalReviewSlides - 1;
+    if (currentReviewIndex >= totalReviewSlides) currentReviewIndex = 0;
     updateReviewCarousel();
+  }
 
-    // Dropdown FOOTIFY toggle on click (for mobile friendliness)
-    const dropdownToggle = document.getElementById('dropdownToggle');
-    const dropdownMenu = document.getElementById('dropdownMenu');
+  // buat indikator review carousel
+  function createReviewIndicators() {
+    for(let i = 0; i < totalReviewSlides; i++) {
+      const dot = document.createElement('button');
+      dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
+      dot.setAttribute('aria-label', `Review slide ${i+1}`);
+      dot.setAttribute('role', 'tab');
+      dot.onclick = () => {
+        currentReviewIndex = i;
+        updateReviewCarousel();
+      };
+      reviewIndicators.appendChild(dot);
+    }
+  }
 
-    dropdownToggle.addEventListener('click', () => {
-      if (dropdownMenu.classList.contains('hidden')) {
-        dropdownMenu.classList.remove('hidden');
-      } else {
-        dropdownMenu.classList.add('hidden');
+  function updateReviewIndicators() {
+    for(let i = 0; i < reviewIndicators.children.length; i++) {
+      reviewIndicators.children[i].classList.toggle('bg-blue-600', i === currentReviewIndex);
+      reviewIndicators.children[i].classList.toggle('bg-gray-400', i !== currentReviewIndex);
+    }
+  }
+
+  createReviewIndicators();
+  updateReviewCarousel();
+
+  setInterval(() => moveReviewSlide(1), 7000);
+
+  // Dropdown toggle
+  const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  dropdownToggle.addEventListener('click', () => {
+    const isHidden = dropdownMenu.classList.contains('hidden');
+    if(isHidden) {
+      dropdownMenu.classList.remove('hidden');
+      dropdownToggle.setAttribute('aria-expanded', 'true');
+    } else {
+      dropdownMenu.classList.add('hidden');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Klik di luar dropdown untuk tutup
+  document.addEventListener('click', (e) => {
+    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.add('hidden');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Animasi fade in on scroll untuk elemen dengan class fade-section
+  function onScrollFade() {
+    const fadeElems = document.querySelectorAll('.fade-section');
+    fadeElems.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
       }
     });
+  }
+  window.addEventListener('scroll', onScrollFade);
+  window.addEventListener('load', onScrollFade);
+</script>
 
-    // Fade-in on scroll for some elements
-    function fadeOnScroll() {
-      const fadeElements = document.querySelectorAll('.fade-section');
-      const triggerBottom = window.innerHeight * 0.9;
-
-      fadeElements.forEach(el => {
-        const boxTop = el.getBoundingClientRect().top;
-
-        if(boxTop < triggerBottom) {
-          el.classList.add('visible');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', fadeOnScroll);
-    window.addEventListener('load', fadeOnScroll);
-  </script>
 </body>
 </html>
