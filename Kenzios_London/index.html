@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beli Kenzios London 2.0 Full Black</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <style>
     #reviewCarousel .carousel-image {
       object-fit: contain;
@@ -70,42 +72,6 @@
       transform: translateX(0);
     }
   </style>
-
-<style>
-    .swiper {
-      touch-action: pan-y;
-    }
-    .swiper-slide img {
-      pointer-events: none;
-    }
-  </style>
-  
-
-  <!-- SEO: Schema.org Product JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "Kenzios London 2.0 Full Black",
-    "image": [
-      "1.webp",
-      "2.webp",
-      "3.webp"
-    ],
-    "description": "Sepatu formal pria original dengan desain elegan dan bahan premium.",
-    "brand": {
-      "@type": "Brand",
-      "name": "FOOTIFY"
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "IDR",
-      "price": "397300",
-      "availability": "https://schema.org/InStock",
-      "url": "https://appurl.io/NknigXZgL9"
-    }
-  }
-  </script>
 </head>
 
 <body class="bg-gray-200 text-gray-800 font-sans">
@@ -131,109 +97,111 @@
 
 <!-- Produk utama -->
 <div class="max-w-6xl mx-auto mt-10 p-4 grid md:grid-cols-2 gap-6 bg-gray-200 rounded-2xl shadow-lg min-h-[600px]">
-  <!-- KIRI: Carousel + Review -->
+  <!-- KIRI -->
   <div class="flex flex-col">
-    <!-- Carousel Produk -->
-    <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel" aria-label="Carousel produk sepatu">
+    <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel">
       <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-        <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image" loading="lazy">
-        <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image" loading="lazy">
-        <img src="3.webp" alt="Detail material sepatu" class="carousel-image" loading="lazy">
-        <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image" loading="lazy">
-        <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image" loading="lazy">
+        <img src="1.webp" alt="" class="carousel-image" loading="lazy">
+        <img src="2.webp" alt="" class="carousel-image" loading="lazy">
+        <img src="3.webp" alt="" class="carousel-image" loading="lazy">
+        <img src="4.webp" alt="" class="carousel-image" loading="lazy">
+        <img src="5.webp" alt="" class="carousel-image" loading="lazy">
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide(-1)" aria-label="Slide sebelumnya" title="Slide sebelumnya">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide(1)" aria-label="Slide selanjutnya" title="Slide selanjutnya">&#10095;</button>
+        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
       </div>
     </div>
-    <div class="flex justify-center gap-2 mb-4" id="carouselIndicators" role="tablist" aria-label="Indikator slide produk"></div>
+    <div class="flex justify-center gap-2 mb-4" id="carouselIndicators"></div>
 
-    <!-- Foto Review -->
     <h2 class="text-xl font-semibold text-center text-gray-800 mb-2">Foto & Video Review</h2>
-    <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel" aria-label="Carousel review pembeli">
+    <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel">
       <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-        <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2" loading="lazy">
-        <img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2" loading="lazy">
-        <img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2" loading="lazy">
-        <img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R1.webp" alt="" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R2.webp" alt="" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R4.webp" alt="" class="carousel-image object-contain bg-white p-2" loading="lazy">
+        <img src="R5.webp" alt="" class="carousel-image object-contain bg-white p-2" loading="lazy">
       </div>
       <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveReviewSlide(-1)" aria-label="Review slide sebelumnya" title="Review slide sebelumnya">&#10094;</button>
-        <button class="carousel-button" onclick="moveReviewSlide(1)" aria-label="Review slide selanjutnya" title="Review slide selanjutnya">&#10095;</button>
+        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
+        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
       </div>
     </div>
-    <div class="flex justify-center gap-2 mt-4" id="reviewIndicators" role="tablist" aria-label="Indikator slide review"></div>
+    <div class="flex justify-center gap-2 mt-4" id="reviewIndicators"></div>
   </div>
 
-  <!-- KANAN: Info Produk -->
+  <!-- KANAN -->
   <div class="flex flex-col justify-start space-y-6">
-    <p class="text-sm font-semibold text-gray-600 uppercase fade-section fade-left mb-1">Prestige 👑: sleek–elegant–premium</p>
+    <p class="text-sm font-semibold text-gray-600 uppercase fade-section fade-left">Prestige 👑: sleek–elegant–premium</p>
     <h1 class="text-3xl md:text-4xl font-bold text-blue-600 fade-section fade-right">Kenzios London 2.0 Full Black</h1>
     <p class="text-lg text-gray-600 fade-section fade-left">100% Original | Sepatu Formal Pria</p>
 
     <div class="space-y-1">
       <p class="text-red-600 text-2xl font-bold fade-section fade-right">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal fade-section fade-left">Rp497.000</span></p>
       <p class="text-sm text-gray-600 fade-section fade-left">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold fade-section fade-right">⭐ 4,9 / 5.0</span></p>
-      <p class="text-sm text-gray-600 fade-section fade-right">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
-      <p class="text-sm text-gray-500 fade-section fade-left">Keaslian dijamin oleh Shopee melalui <strong>'Jaminan Shopee'</strong>.</p>
     </div>
 
-    <div class="flex flex-col gap-4 items-center">
-      <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right" target="_blank" rel="noopener noreferrer">
-        Checkout di Shopee
-      </a>
-      <div class="text-center">
-        <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-             alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right" loading="lazy">
-      </div>
+    <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right" target="_blank">
+      Checkout di Shopee
+    </a>
 
-      <div class="md:w-1/2 mt-10 md:mt-0 w-full">
-          <div class="swiper mySwiper w-full">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="../produk2.html">
-                <img src="../produk2.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                  <p class="text-gray-600 text-sm mt-1"><strong>Urban Bloom</strong>🌷: Comfy – Light – Fierce</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="../Adidas_Samba_OG_White_Gum">
-                  
-                <img src="../Adidas_Samba_OG_White_Gum/produk3.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                  <p class="text-gray-600 text-sm mt-1"><strong>Prestige</strong>👑: Classic - Versatile - Iconic</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="../UNERD | STRYKE/">
-                <img src="../UNERD | STRYKE/SLIDE 4.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                   <p class="text-gray-600 text-sm mt-1"><strong>Urban Cool</strong>😎: Retro-modern - Clean - Sporty</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="../produk1.html">
-                <img src="../produk1.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                  <p class="text-gray-600 text-sm mt-1"><strong>Street Wise</strong>👟: Fresh - Bold - Affordable</p>
-                  
-                </a>
-              </div>
-            </div>
-            <!-- Tombol navigasi opsional -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
+    <div class="swiper mySwiper w-full mt-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="../produk2.html">
+            <img src="../produk2.webp" alt="" class="rounded-xl shadow-lg w-full">
+            <p class="text-gray-600 text-sm mt-1"><strong>Urban Bloom</strong>🌷: Comfy – Light – Fierce</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="../Adidas_Samba_OG_White_Gum">
+            <img src="../Adidas_Samba_OG_White_Gum/produk3.webp" alt="" class="rounded-xl shadow-lg w-full">
+            <p class="text-gray-600 text-sm mt-1"><strong>Prestige</strong>👑: Classic - Versatile - Iconic</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="../UNERD | STRYKE/">
+            <img src="../UNERD | STRYKE/SLIDE 4.webp" alt="" class="rounded-xl shadow-lg w-full">
+            <p class="text-gray-600 text-sm mt-1"><strong>Urban Cool</strong>😎: Retro-modern - Clean - Sporty</p>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="../produk1.html">
+            <img src="../produk1.webp" alt="" class="rounded-xl shadow-lg w-full">
+            <p class="text-gray-600 text-sm mt-1"><strong>Street Wise</strong>👟: Fresh - Bold - Affordable</p>
+          </a>
         </div>
       </div>
-
-      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
   </div>
 </div>
 
-
+<!-- Swiper & JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  // Carousel Produk
+  new Swiper(".mySwiper", {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2.5
+      },
+      1024: {
+        slidesPerView: 3.5
+      }
+    }
+  });
+</script>
+
+<!-- Script carousel manual & dropdown -->
+<script>
+  // Carousel utama
   const carouselTrack = document.getElementById('carouselTrack');
   const carouselImages = carouselTrack.children;
   const totalSlides = carouselImages.length;
@@ -247,19 +215,14 @@
   }
 
   function moveSlide(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = totalSlides - 1;
-    if (currentIndex >= totalSlides) currentIndex = 0;
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
     updateCarousel();
   }
 
-  // buat indikator carousel
   function createIndicators() {
-    for(let i = 0; i < totalSlides; i++) {
+    for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('button');
-      dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
-      dot.setAttribute('aria-label', `Slide ${i+1}`);
-      dot.setAttribute('role', 'tab');
+      dot.className = 'w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition';
       dot.onclick = () => {
         currentIndex = i;
         updateCarousel();
@@ -269,23 +232,21 @@
   }
 
   function updateIndicators() {
-    for(let i = 0; i < indicators.children.length; i++) {
-      indicators.children[i].classList.toggle('bg-blue-600', i === currentIndex);
-      indicators.children[i].classList.toggle('bg-gray-400', i !== currentIndex);
-    }
+    Array.from(indicators.children).forEach((dot, i) => {
+      dot.classList.toggle('bg-blue-600', i === currentIndex);
+      dot.classList.toggle('bg-gray-400', i !== currentIndex);
+    });
   }
 
   createIndicators();
   updateCarousel();
-
   setInterval(() => moveSlide(1), 5000);
 
-  // Carousel Review
+  // Carousel review
   const reviewTrack = document.getElementById('reviewTrack');
   const reviewImages = reviewTrack.children;
   const totalReviewSlides = reviewImages.length;
   let currentReviewIndex = 0;
-
   const reviewIndicators = document.getElementById('reviewIndicators');
 
   function updateReviewCarousel() {
@@ -294,19 +255,14 @@
   }
 
   function moveReviewSlide(direction) {
-    currentReviewIndex += direction;
-    if (currentReviewIndex < 0) currentReviewIndex = totalReviewSlides - 1;
-    if (currentReviewIndex >= totalReviewSlides) currentReviewIndex = 0;
+    currentReviewIndex = (currentReviewIndex + direction + totalReviewSlides) % totalReviewSlides;
     updateReviewCarousel();
   }
 
-  // buat indikator review carousel
   function createReviewIndicators() {
-    for(let i = 0; i < totalReviewSlides; i++) {
+    for (let i = 0; i < totalReviewSlides; i++) {
       const dot = document.createElement('button');
-      dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
-      dot.setAttribute('aria-label', `Review slide ${i+1}`);
-      dot.setAttribute('role', 'tab');
+      dot.className = 'w-3 h-3 rounded-full bg-gray-400 hover:bg-gray-600 transition';
       dot.onclick = () => {
         currentReviewIndex = i;
         updateReviewCarousel();
@@ -316,74 +272,40 @@
   }
 
   function updateReviewIndicators() {
-    for(let i = 0; i < reviewIndicators.children.length; i++) {
-      reviewIndicators.children[i].classList.toggle('bg-blue-600', i === currentReviewIndex);
-      reviewIndicators.children[i].classList.toggle('bg-gray-400', i !== currentReviewIndex);
-    }
+    Array.from(reviewIndicators.children).forEach((dot, i) => {
+      dot.classList.toggle('bg-blue-600', i === currentReviewIndex);
+      dot.classList.toggle('bg-gray-400', i !== currentReviewIndex);
+    });
   }
 
   createReviewIndicators();
   updateReviewCarousel();
-
   setInterval(() => moveReviewSlide(1), 7000);
 
   // Dropdown toggle
   const dropdownToggle = document.getElementById('dropdownToggle');
   const dropdownMenu = document.getElementById('dropdownMenu');
-
   dropdownToggle.addEventListener('click', () => {
-    const isHidden = dropdownMenu.classList.contains('hidden');
-    if(isHidden) {
-      dropdownMenu.classList.remove('hidden');
-      dropdownToggle.setAttribute('aria-expanded', 'true');
-    } else {
-      dropdownMenu.classList.add('hidden');
-      dropdownToggle.setAttribute('aria-expanded', 'false');
-    }
+    dropdownMenu.classList.toggle('hidden');
   });
-
-  // Klik di luar dropdown untuk tutup
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', e => {
     if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
       dropdownMenu.classList.add('hidden');
-      dropdownToggle.setAttribute('aria-expanded', 'false');
     }
   });
 
-  // Animasi fade in on scroll untuk elemen dengan class fade-section
+  // Fade on scroll
   function onScrollFade() {
     const fadeElems = document.querySelectorAll('.fade-section');
     fadeElems.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 100) {
-        el.classList.add('visible');
-      }
+      if (rect.top < window.innerHeight - 100) el.classList.add('visible');
     });
   }
+
   window.addEventListener('scroll', onScrollFade);
   window.addEventListener('load', onScrollFade);
 </script>
 
- <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-      loop: true,
-      grabCursor: true,
-      allowTouchMove: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2.2,
-        },
-      },
-    });
-  </script>
-  
 </body>
 </html>
