@@ -6,20 +6,20 @@
   <title>Beli Kenzios London 2.0 Full Black</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-#reviewCarousel .carousel-image {
-  object-fit: contain;
-  padding: 1rem;
-  background-color: white;
-}
+    #reviewCarousel .carousel-image {
+      object-fit: contain;
+      padding: 1rem;
+      background-color: white;
+    }
 
-    
     .carousel-image, video.carousel-image {
-  min-width: 100%;
-  height: 100%;
-  max-height: 100%;
-  border-radius: 1rem;
-  object-fit: cover;
-}
+      min-width: 100%;
+      height: 100%;
+      max-height: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+
     .carousel-buttons {
       position: absolute;
       top: 50%;
@@ -28,7 +28,9 @@
       justify-content: space-between;
       transform: translateY(-50%);
       padding: 0 1rem;
+      pointer-events: auto;
     }
+
     .carousel-button {
       background-color: rgba(0, 0, 0, 0.5);
       color: white;
@@ -37,29 +39,37 @@
       cursor: pointer;
       border-radius: 9999px;
       transition: background-color 0.2s ease;
+      user-select: none;
     }
+
     .carousel-button:hover {
       background-color: rgba(0, 0, 0, 0.7);
     }
+
     .fade-section {
       opacity: 0;
       transform: translateY(40px);
       transition: all 0.6s ease;
     }
+
     .fade-section.visible {
       opacity: 1;
       transform: translateY(0);
     }
+
     .fade-left {
       transform: translateX(-40px);
     }
+
     .fade-right {
       transform: translateX(40px);
     }
+
     .fade-left.visible, .fade-right.visible {
       transform: translateX(0);
     }
   </style>
+
   <!-- SEO: Schema.org Product JSON-LD -->
   <script type="application/ld+json">
   {
@@ -89,8 +99,8 @@
 
 <body class="bg-gray-200 text-gray-800 font-sans">
 
-  <!-- Floating Nav -->
-  <div class="fixed top-4 left-4 z-50 flex flex-col items-start space-y-2">
+  <!-- Floating Nav - kanan bawah -->
+  <div class="fixed bottom-4 right-4 z-50 flex flex-col items-end space-y-2 pointer-events-auto">
     <a href="/kategori.html" class="bg-white shadow-md border px-4 py-2 rounded-full text-sm font-semibold text-gray-700 hover:bg-gray-100 transition">
       ← Kembali ke Kategori
     </a>
@@ -98,7 +108,7 @@
       <div id="dropdownToggle" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm shadow-lg hover:bg-gray-800 transition cursor-pointer select-none">
         FOOTIFY
       </div>
-      <div id="dropdownMenu" class="absolute left-0 mt-2 w-44 bg-white border rounded-lg shadow-lg hidden group-hover:block z-50">
+      <div id="dropdownMenu" class="absolute right-0 bottom-12 w-44 bg-white border rounded-lg shadow-lg hidden group-hover:block z-50">
         <a href="/index.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Home</a>
         <a href="/casual.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Casual</a>
         <a href="/formal.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100">Formal</a>
@@ -108,158 +118,197 @@
     </div>
   </div>
 
-  <!-- Produk Container -->
-  <div class="max-w-4xl mx-auto p-6 bg-gray-200 shadow-xl rounded-2xl">
-    <h1 class="fade-section fade-right mt-20 text-3xl md:text-4xl font-bold mb-2 text-center text-blue-600">Kenzios London 2.0 Full Black</h1>
-    <p class="fade-section fade-left text-center text-lg mb-6 text-gray-600">100% Original | Sepatu Formal Pria</p>
+  <!-- Produk utama -->
+  <div class="max-w-6xl mx-auto mt-20 p-4 grid md:grid-cols-2 gap-6 bg-gray-200 rounded-2xl shadow-lg">
+    <!-- KIRI: Carousel + Review -->
+    <div>
+      <!-- Carousel Produk -->
+      <div class="relative overflow-hidden rounded-xl shadow mb-6" id="mainCarousel">
+        <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
+          <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image">
+          <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image">
+          <img src="3.webp" alt="Detail material sepatu" class="carousel-image">
+          <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image">
+          <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image">
+        </div>
+        <div class="carousel-buttons">
+          <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </div>
+      <div class="flex justify-center gap-2 mb-4" id="carouselIndicators"></div>
 
-    <!-- Main Carousel -->
-<div class="relative overflow-hidden rounded-xl shadow mb-8 mx-auto max-w-2xl" id="mainCarousel">
-      <div class="flex transition-transform duration-300 ease-in-out" id="carouselTrack">
-        <img src="1.webp" alt="Sepatu tampak depan" class="carousel-image">
-        <img src="2.webp" alt="Sepatu tampak samping" class="carousel-image">
-        <img src="3.webp" alt="Detail material sepatu" class="carousel-image">
-        <img src="4.webp" alt="Sepatu dipakai pria" class="carousel-image">
-        <img src="5.webp" alt="Box dan kemasan sepatu" class="carousel-image">
+      <!-- Foto Review -->
+      <h2 class="text-xl font-semibold text-center text-gray-800 mb-2">Foto & Video Review</h2>
+      <div class="relative overflow-hidden rounded-xl shadow aspect-video bg-black" id="reviewCarousel">
+        <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
+          <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2">
+          <img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2">
+          <img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2">
+          <img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2">
+        </div>
+        <div class="carousel-buttons">
+          <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
+          <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
+        </div>
       </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveSlide(1)">&#10095;</button>
-      </div>
+      <div class="flex justify-center gap-2 mt-4" id="reviewIndicators"></div>
     </div>
 
-    <!-- Indicators -->
-    <div class="flex justify-center gap-2 mb-4" id="carouselIndicators"></div>
+    <!-- KANAN: Info Produk -->
+    <div class="flex flex-col justify-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2 text-blue-600 fade-section fade-right">Kenzios London 2.0 Full Black</h1>
+      <p class="text-lg mb-4 text-gray-600 fade-section fade-left">100% Original | Sepatu Formal Pria</p>
 
-    <!-- Harga & Informasi -->
-    <div class="text-center space-y-1">
-      <p class="fade-section fade-right text-red-600 text-2xl font-bold">Rp397.300 <span class="fade-section fade-left line-through text-gray-500 text-lg font-normal">Rp497.000</span></p>
-      <p class="fade-section fade-left text-sm text-gray-600">Terjual: 2,1RB • Rating: <span class="fade-section fade-right text-yellow-500 font-semibold">⭐ 4,9 / 5.0</span></p>
-      <p class="fade-section fade-right text-sm text-gray-600">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
-      <p class="fade-section fade-left text-sm text-gray-500">Keaslian produk dijamin oleh Shopee melalui fitur <strong>'Jaminan Shopee'</strong> saat checkout.</p>
-    </div>
+      <!-- Harga & Info -->
+      <div class="space-y-1 mb-6">
+        <p class="text-red-600 text-2xl font-bold fade-section fade-right">Rp397.300 <span class="line-through text-gray-500 text-lg font-normal fade-section fade-left">Rp497.000</span></p>
+        <p class="text-sm text-gray-600 fade-section fade-left">Terjual: 2,1RB • Rating: <span class="text-yellow-500 font-semibold fade-section fade-right">⭐ 4,9 / 5.0</span></p>
+        <p class="text-sm text-gray-600 fade-section fade-right">Garansi tiba: <strong>3–4 hari</strong> • Pengembalian: <strong>15 Hari</strong></p>
+        <p class="text-sm text-gray-500 fade-section fade-left">Keaslian dijamin oleh Shopee melalui <strong>'Jaminan Shopee'</strong>.</p>
+      </div>
 
-    <!-- CTA -->
-    <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6">
-      <a href="https://appurl.io/NknigXZgL9" class="fade-section fade-right bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition">
-        Checkout di Shopee
-      </a>
-      <div class="text-center">
-        <p class="fade-section fade-left font-medium mb-2">Scan QR untuk Checkout:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-             alt="QR Code Shopee" class="fade-section fade-right mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm">
+      <!-- CTA -->
+      <div class="flex flex-col gap-4 items-center">
+        <a href="https://appurl.io/NknigXZgL9" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-md transition fade-section fade-right">
+          Checkout di Shopee
+        </a>
+        <div class="text-center">
+          <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
+               alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right">
+        </div>
       </div>
     </div>
   </div>
 
-<!-- Review Section -->
-<div class="relative overflow-hidden rounded-xl shadow mx-auto max-w-2xl aspect-video bg-black" id="reviewCarousel">
-    <h2 class="fade-section fade-right text-2xl font-semibold text-center text-gray-800 mb-4">Foto & Video Review Pembeli</h2>
-    <div class="relative overflow-hidden rounded-xl shadow" id="reviewCarousel">
-      <div class="flex transition-transform duration-300 ease-in-out" id="reviewTrack">
-       <img src="R1.webp" alt="Review pembeli 1" class="carousel-image object-contain bg-white p-2">
-<img src="R2.webp" alt="Review pembeli 2" class="carousel-image object-contain bg-white p-2">
-<img src="R4.webp" alt="Review pembeli 4" class="carousel-image object-contain bg-white p-2">
-<img src="R5.webp" alt="Review pembeli 5" class="carousel-image object-contain bg-white p-2">
-
-      </div>
-      <div class="carousel-buttons">
-        <button class="carousel-button" onclick="moveReviewSlide(-1)">&#10094;</button>
-        <button class="carousel-button" onclick="moveReviewSlide(1)">&#10095;</button>
-      </div>
-    </div>
-    <!-- Indicators -->
-    <div class="flex justify-center gap-2 mt-4" id="reviewIndicators"></div>
-  </div>
-
-  <footer class="text-center text-sm text-gray-400 py-6 mt-10">
-    © 2025 FOOTIFY. All rights reserved.
-  </footer>
-
-  <!-- Script Carousel & Swipe -->
   <script>
-    let index = 0, reviewIndex = 0;
+    // Carousel Produk
+    const carouselTrack = document.getElementById('carouselTrack');
+    const carouselImages = carouselTrack.children;
+    const totalSlides = carouselImages.length;
+    let currentIndex = 0;
+
+    const indicators = document.getElementById('carouselIndicators');
+
+    function updateCarousel() {
+      carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+      updateIndicators();
+    }
 
     function moveSlide(direction) {
-      const track = document.getElementById('carouselTrack');
-      const slideWidth = track.children[0].offsetWidth;
-      const slides = track.children.length;
-      index = (index + direction + slides) % slides;
-      track.style.transform = 'translateX(' + (-index * slideWidth) + 'px)';
-      updateIndicators('carouselIndicators', index, slides);
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = totalSlides - 1;
+      if (currentIndex >= totalSlides) currentIndex = 0;
+      updateCarousel();
+    }
+
+    // buat indikator carousel
+    function createIndicators() {
+      for(let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
+        dot.setAttribute('aria-label', `Slide ${i+1}`);
+        dot.onclick = () => {
+          currentIndex = i;
+          updateCarousel();
+        };
+        indicators.appendChild(dot);
+      }
+    }
+
+    function updateIndicators() {
+      const dots = indicators.children;
+      for(let i=0; i<dots.length; i++) {
+        dots[i].classList.remove('bg-gray-600');
+        dots[i].classList.add('bg-gray-400');
+      }
+      if(dots[currentIndex]) {
+        dots[currentIndex].classList.add('bg-gray-600');
+        dots[currentIndex].classList.remove('bg-gray-400');
+      }
+    }
+
+    createIndicators();
+    updateCarousel();
+
+    // Carousel Review
+    const reviewTrack = document.getElementById('reviewTrack');
+    const reviewImages = reviewTrack.children;
+    const totalReviewSlides = reviewImages.length;
+    let currentReviewIndex = 0;
+
+    const reviewIndicators = document.getElementById('reviewIndicators');
+
+    function updateReviewCarousel() {
+      reviewTrack.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+      updateReviewIndicators();
     }
 
     function moveReviewSlide(direction) {
-      const track = document.getElementById('reviewTrack');
-      const slideWidth = track.children[0].offsetWidth;
-      const slides = track.children.length;
-      reviewIndex = (reviewIndex + direction + slides) % slides;
-      track.style.transform = 'translateX(' + (-reviewIndex * slideWidth) + 'px)';
-      updateIndicators('reviewIndicators', reviewIndex, slides);
+      currentReviewIndex += direction;
+      if (currentReviewIndex < 0) currentReviewIndex = totalReviewSlides - 1;
+      if (currentReviewIndex >= totalReviewSlides) currentReviewIndex = 0;
+      updateReviewCarousel();
     }
 
-    function updateIndicators(containerId, activeIndex, total) {
-      const container = document.getElementById(containerId);
-      container.innerHTML = '';
-      for (let i = 0; i < total; i++) {
-        const dot = document.createElement('div');
-        dot.className = `w-2 h-2 rounded-full ${i === activeIndex ? 'bg-blue-600' : 'bg-gray-400'}`;
-        container.appendChild(dot);
+    // buat indikator review carousel
+    function createReviewIndicators() {
+      for(let i = 0; i < totalReviewSlides; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-gray-400', 'hover:bg-gray-600', 'transition');
+        dot.setAttribute('aria-label', `Review Slide ${i+1}`);
+        dot.onclick = () => {
+          currentReviewIndex = i;
+          updateReviewCarousel();
+        };
+        reviewIndicators.appendChild(dot);
       }
     }
 
-    function setupSwipe(carouselId, trackId, isReview = false) {
-      let startX = 0;
-      const container = document.getElementById(carouselId);
-      const track = document.getElementById(trackId);
-      const slides = track.children.length;
+    function updateReviewIndicators() {
+      const dots = reviewIndicators.children;
+      for(let i=0; i<dots.length; i++) {
+        dots[i].classList.remove('bg-gray-600');
+        dots[i].classList.add('bg-gray-400');
+      }
+      if(dots[currentReviewIndex]) {
+        dots[currentReviewIndex].classList.add('bg-gray-600');
+        dots[currentReviewIndex].classList.remove('bg-gray-400');
+      }
+    }
 
-      container.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-      container.addEventListener('touchend', e => {
-        const diff = e.changedTouches[0].clientX - startX;
-        const threshold = 50;
-        if (diff > threshold) {
-          isReview ? moveReviewSlide(-1) : moveSlide(-1);
-        } else if (diff < -threshold) {
-          isReview ? moveReviewSlide(1) : moveSlide(1);
+    createReviewIndicators();
+    updateReviewCarousel();
+
+    // Dropdown FOOTIFY toggle on click (for mobile friendliness)
+    const dropdownToggle = document.getElementById('dropdownToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownToggle.addEventListener('click', () => {
+      if (dropdownMenu.classList.contains('hidden')) {
+        dropdownMenu.classList.remove('hidden');
+      } else {
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+
+    // Fade-in on scroll for some elements
+    function fadeOnScroll() {
+      const fadeElements = document.querySelectorAll('.fade-section');
+      const triggerBottom = window.innerHeight * 0.9;
+
+      fadeElements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+
+        if(boxTop < triggerBottom) {
+          el.classList.add('visible');
         }
       });
-
-      updateIndicators(isReview ? 'reviewIndicators' : 'carouselIndicators', 0, slides);
     }
 
-    setupSwipe('mainCarousel', 'carouselTrack');
-    setupSwipe('reviewCarousel', 'reviewTrack', true);
+    window.addEventListener('scroll', fadeOnScroll);
+    window.addEventListener('load', fadeOnScroll);
   </script>
-
-  <!-- Dropdown script -->
-  <script>
-    const toggle = document.getElementById('dropdownToggle');
-    const menu = document.getElementById('dropdownMenu');
-
-    toggle.addEventListener('click', function (e) {
-      menu.classList.toggle('hidden');
-      e.stopPropagation();
-    });
-
-    document.addEventListener('click', function (e) {
-      if (!document.getElementById('dropdownContainer').contains(e.target)) {
-        menu.classList.add('hidden');
-      }
-    });
-  </script>
-
-  <!-- Intersection Observer -->
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-        else entry.target.classList.remove('visible');
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
-  </script>
-
 </body>
 </html>
