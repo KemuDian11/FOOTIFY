@@ -71,6 +71,16 @@
     }
   </style>
 
+<style>
+    .swiper {
+      touch-action: pan-y;
+    }
+    .swiper-slide img {
+      pointer-events: none;
+    }
+  </style>
+  
+
   <!-- SEO: Schema.org Product JSON-LD -->
   <script type="application/ld+json">
   {
@@ -181,6 +191,43 @@
     </div>
   </div>
 </div>
+
+<div class="md:w-1/2 mt-10 md:mt-0 w-full">
+          <div class="swiper mySwiper w-full">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="produk2.html">
+                <img src="produk2.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
+                  <p class="text-gray-600 text-sm mt-1"><strong>Urban Bloom</strong>🌷: Comfy – Light – Fierce</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="/Adidas_Samba_OG_White_Gum">
+                  
+                <img src="/Adidas_Samba_OG_White_Gum/produk3.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
+                  <p class="text-gray-600 text-sm mt-1"><strong>Prestige</strong>👑: Classic - Versatile - Iconic</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="UNERD | STRYKE/">
+                <img src="UNERD | STRYKE/SLIDE 4.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
+                   <p class="text-gray-600 text-sm mt-1"><strong>Urban Cool</strong>😎: Retro-modern - Clean - Sporty</p>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="produk1.html">
+                <img src="produk1.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
+                  <p class="text-gray-600 text-sm mt-1"><strong>Street Wise</strong>👟: Fresh - Bold - Affordable</p>
+                  
+                </a>
+              </div>
+            </div>
+            <!-- Tombol navigasi opsional -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
 
 <script>
   // Carousel Produk
@@ -314,5 +361,26 @@
   window.addEventListener('load', onScrollFade);
 </script>
 
+ <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      allowTouchMove: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2.2,
+        },
+      },
+    });
+  </script>
+  
 </body>
 </html>
