@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beli Kenzios London 2.0 Full Black</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <style>
     #reviewCarousel .carousel-image {
@@ -146,78 +145,19 @@
     </a>
 
     <div class="text-center">
-        <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
-             alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right" loading="lazy">
-      </div>
-
-    <!-- Swiper Slider Gambar -->
-        <div class="md:w-1/2 mt-10 md:mt-0 w-full">
-          <div class="swiper mySwiper w-full">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="produk2.html">
-                <img src="produk2.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                  <p class="text-gray-600 text-sm mt-1"><strong>Urban Bloom</strong>🌷: Comfy – Light – Fierce</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="/Adidas_Samba_OG_White_Gum">
-                  
-                <img src="/Adidas_Samba_OG_White_Gum/produk3.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                  <p class="text-gray-600 text-sm mt-1"><strong>Prestige</strong>👑: Classic - Versatile - Iconic</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="UNERD | STRYKE/">
-                <img src="UNERD | STRYKE/SLIDE 4.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                   <p class="text-gray-600 text-sm mt-1"><strong>Urban Cool</strong>😎: Retro-modern - Clean - Sporty</p>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="produk1.html">
-                <img src="produk1.webp" alt="Fashion" class="rounded-xl shadow-lg w-full">
-                  <p class="text-gray-600 text-sm mt-1"><strong>Street Wise</strong>👟: Fresh - Bold - Affordable</p>
-                  
-                </a>
-              </div>
-            </div>
-            <!-- Tombol navigasi opsional -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-          </div>
-        </div>
-      </div>
-
-<!-- Swiper & JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  new Swiper(".mySwiper", {
-    slidesPerView: 1.2,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 2.5
-      },
-      1024: {
-        slidesPerView: 3.5
-      }
-    }
-  });
-</script>
+      <p class="font-medium mb-2 fade-section fade-left">Scan QR untuk Checkout:</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fappurl.io%2FNknigXZgL9"
+           alt="QR Code Shopee" class="mx-auto w-40 h-40 object-contain rounded-lg border border-gray-200 shadow-sm fade-section fade-right" loading="lazy">
+    </div>
+  </div>
+</div>
 
 <!-- Script carousel manual & dropdown -->
 <script>
-  // Carousel utama
   const carouselTrack = document.getElementById('carouselTrack');
   const carouselImages = carouselTrack.children;
   const totalSlides = carouselImages.length;
   let currentIndex = 0;
-
   const indicators = document.getElementById('carouselIndicators');
 
   function updateCarousel() {
@@ -253,7 +193,7 @@
   updateCarousel();
   setInterval(() => moveSlide(1), 5000);
 
-  // Carousel review
+  // Review Carousel
   const reviewTrack = document.getElementById('reviewTrack');
   const reviewImages = reviewTrack.children;
   const totalReviewSlides = reviewImages.length;
@@ -293,7 +233,7 @@
   updateReviewCarousel();
   setInterval(() => moveReviewSlide(1), 7000);
 
-  // Dropdown toggle
+  // Dropdown
   const dropdownToggle = document.getElementById('dropdownToggle');
   const dropdownMenu = document.getElementById('dropdownMenu');
   dropdownToggle.addEventListener('click', () => {
