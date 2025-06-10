@@ -19,18 +19,24 @@
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-blue-600 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-white">FOOTIFY</div>
-      <div class="space-x-6 hidden md:flex">
-        <a href="#" class="text-white hover:text-gray-200">Beranda</a>
-        <a href="#" class="text-white hover:text-gray-200">Produk</a>
-        <a href="#" class="text-white hover:text-gray-200">Tentang</a>
-        <a href="#" class="text-white hover:text-gray-200">Kontak</a>
-      </div>
+  <!-- Floating Nav - kiri atas -->
+<div class="fixed top-4 left-4 z-50 flex flex-col items-start space-y-2 pointer-events-auto">
+  <a href="/kategori.html" class="bg-gray-800 shadow-md border border-gray-600 px-5 py-2 rounded-full text-sm font-semibold text-gray-300 hover:bg-gray-700 transition">
+    ← Kembali ke Kategori
+  </a>
+  <div class="relative" id="dropdownContainer">
+    <div id="dropdownToggle" class="bg-blue-600 text-white px-6 py-3 rounded-full font-bold text-base shadow-lg hover:bg-gray-800 transition cursor-pointer select-none">
+      FOOTIFY
     </div>
-  </nav>
+    <div id="dropdownMenu" class="absolute left-0 top-12 w-44 bg-gray-900 border border-gray-700 rounded-lg shadow-lg hidden z-50">
+      <a href="/index.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Home</a>
+      <a href="/casual.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Casual</a>
+      <a href="/formal.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Formal</a>
+      <a href="/sports.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Sports</a>
+      <a href="/womens-style.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800">Woman's Style</a>
+    </div>
+  </div>
+</div>
 
   <!-- Hero Section -->
   <section class="relative bg-gray-100">
@@ -386,6 +392,32 @@
       },
     });
   </script>
+<script?
+   // Dropdown
+  const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  dropdownToggle.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+  document.addEventListener('click', e => {
+    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+
+  // Fade on scroll
+  function onScrollFade() {
+    const fadeElems = document.querySelectorAll('.fade-section');
+    fadeElems.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+    });
+  }
+
+  window.addEventListener('scroll', onScrollFade);
+  window.addEventListener('load', onScrollFade);
+</script>
+  
 </body>
 </html>
 
